@@ -1,0 +1,14 @@
+/**
+ * SocialFocus
+ * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, modification, distribution, or use is strictly prohibited.
+ */
+
+#deleteAccountScreen .delete-account-description-text {
+  font-size: var(--text-size-default);
+  line-height: var(--line-height-one-and-half);
+  text-align: center;
+  color: var(--primary-color-on-primary-background);
+}

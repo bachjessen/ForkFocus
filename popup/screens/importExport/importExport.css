@@ -1,0 +1,99 @@
+/**
+ * SocialFocus
+ * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, modification, distribution, or use is strictly prohibited.
+ */
+
+#importExportScreen .bolder {
+  font-weight: 800;
+}
+
+#importExportScreen .optionsReleaseSection[hidden] {
+  display: none;
+}
+
+#importExportScreen .optionsReleaseSection {
+  border-bottom: 1px solid var(--elements-underlay-background);
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+}
+
+#importExportScreen .testerBadge {
+  background: color-mix(in srgb, var(--primary-color, #168b67) 14%, transparent);
+  border-radius: 999px;
+  color: var(--primary-color, #168b67);
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  margin-left: 6px;
+  padding: 3px 7px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+#importExportScreen #optionsReleaseSelect {
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+#importExportScreen .optionsReleaseStatus {
+  color: var(--secondary-text-color);
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 10px 0 0;
+}
+
+#importExportScreen .optionsReleaseStatus.success {
+  color: var(--primary-color, #168b67);
+}
+
+#importExportScreen .optionsReleaseStatus.error {
+  color: var(--destruct-button-background, #c84949);
+}
+
+#importExportScreen .optionsUpdateTest {
+  border-top: 1px solid var(--elements-underlay-background);
+  margin-top: 18px;
+  padding-top: 18px;
+}
+
+#importExportScreen .optionsUpdateTest .instructionSubLabel {
+  margin-bottom: 12px;
+}
+
+#importExportScreen #optionsUpdateDelaySelect {
+  margin-bottom: 10px;
+}
+
+#importExportScreen .buttonsWrapper #exportSettingsButton {
+  margin-bottom: 15px;
+}
+
+#importExportScreen .textField {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: var(--text-size-default);
+  padding: 10px 15px;
+  background: var(--elements-underlay-background);
+  border: 1px solid var(--elements-underlay-background);
+  border-radius: var(--border-radius-input);
+  color: var(--primary-text-color);
+}
+
+#importExportScreen .modernFormBlockItemsWrapper {
+  background: var(--elements-underlay-background);
+  border-radius: var(--border-radius-sections);
+
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+#importExportScreen .textField.error {
+  border-color: var(--destruct-button-background);
+}
+
+#importExportScreen #importSettingsButton {
+  margin-bottom: 15px;
+}

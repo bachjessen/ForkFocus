@@ -1,0 +1,35 @@
+/**
+ * SocialFocus
+ * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, modification, distribution, or use is strictly prohibited.
+ */
+
+#openingTimerWaitScreen .unlockIcon {
+  color: var(--primary-color-on-primary-background);
+  margin-bottom: 10px;
+  font-size: var(--text-size-icon-large);
+}
+
+#openingTimerWaitScreen .unlockHeadline {
+  font-size: var(--text-size-medium);
+  color: var(--primary-color-on-primary-background);
+  font-weight: 600;
+  line-height: var(--line-height-medium);
+  margin-top: 10px;
+}
+
+#openingTimerWaitScreen .unlockSubHeadline {
+  font-size: var(--text-size-default);
+  color: var(--secondary-color-on-primary-background);
+  line-height: var(--line-height-message);
+  margin-top: 10px;
+}
+
+#openingTimerWaitScreen .subScreenContent {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
