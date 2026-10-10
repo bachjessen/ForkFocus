@@ -1,5 +1,5 @@
 /**
- * SocialFocus
+ * ForkFocus
  * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
  *
  * This source code is proprietary and confidential.
@@ -36,7 +36,7 @@ export function renderStartupError(
 
   const title = documentRef.createElement("h1");
   title.className = "startupErrorTitle";
-  title.textContent = "SocialFocus couldn't start";
+  title.textContent = "ForkFocus couldn't start";
 
   const message = documentRef.createElement("p");
   message.className = "startupErrorMessage";

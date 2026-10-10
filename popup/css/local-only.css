@@ -1,0 +1,12 @@
+/* ForkFocus local-only mode: suppress upstream commercial and service UI. */
+.pro-badge,
+.proButton,
+#plusPromoScreen,
+#moreScreen .headerRightLinks,
+#moreScreen .profileInfo,
+#moreScreeen #iCloudSyncingSelect,
+#moreScreen .subScreenInfo,
+#moreScreen .popUpMenuListGroupHeaderContainer,
+#moreScreen .myOtherApps {
+  display: none !important;
+}

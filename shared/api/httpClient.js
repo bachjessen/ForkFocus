@@ -7,6 +7,11 @@
  */
 
 export async function fetchWithTimeout(url, options = {}, timeoutMs = 6000) {
+  const parsedUrl = new URL(url, globalThis.location?.href);
+  if (!["moz-extension:", "chrome-extension:", "safari-web-extension:"].includes(parsedUrl.protocol)) {
+    throw new Error("local_only_network_blocked");
+  }
+
   const controller = new AbortController();
   const timerId = setTimeout(() => controller.abort(), timeoutMs);
 

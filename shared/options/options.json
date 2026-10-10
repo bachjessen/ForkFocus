@@ -1,5 +1,5 @@
 {
-  "currentVersion": "1.0.7",
+  "currentVersion": "1.0.9",
   "data": [
     {
       "categoryId": "youtube",
@@ -42,45 +42,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "youtube",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على موقع يوتيوب",
-                "ca": "Desactiva SocialFocus a YouTube",
-                "zh-CN": "在 YouTube 上禁用 SocialFocus",
-                "zh-TW": "在 YouTube 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na YouTubeu",
-                "cs": "Zakázat SocialFocus na YouTube",
-                "da": "Deaktiver SocialFocus på YouTube",
-                "nl": "Schakel SocialFocus uit op YouTube",
-                "en": "Disable SocialFocus on YouTube",
-                "fi": "Poista SocialFocus käytöstä YouTubessa",
-                "fr": "Désactivez SocialFocus sur YouTube",
-                "de": "Deaktivieren Sie SocialFocus auf YouTube",
-                "el": "Απενεργοποιήστε το SocialFocus στο YouTube",
-                "he": "השבת את SocialFocus ב-YouTube",
+                "ca": "Desactiva ForkFocus a YouTube",
+                "zh-CN": "在 YouTube 上禁用 ForkFocus",
+                "zh-TW": "在 YouTube 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na YouTubeu",
+                "cs": "Zakázat ForkFocus na YouTube",
+                "da": "Deaktiver ForkFocus på YouTube",
+                "nl": "Schakel ForkFocus uit op YouTube",
+                "en": "Disable ForkFocus on YouTube",
+                "fi": "Poista ForkFocus käytöstä YouTubessa",
+                "fr": "Désactivez ForkFocus sur YouTube",
+                "de": "Deaktivieren Sie ForkFocus auf YouTube",
+                "el": "Απενεργοποιήστε το ForkFocus στο YouTube",
+                "he": "השבת את ForkFocus ב-YouTube",
                 "hi": "यूट्यूब पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a YouTube-on",
+                "hu": "A ForkFocus letiltása a YouTube-on",
                 "id": "Nonaktifkan Fokus Sosial di YouTube",
-                "it": "Disattiva SocialFocus su YouTube",
-                "ja": "YouTube で SocialFocus を無効にする",
-                "ko": "YouTube에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada YouTube",
-                "no": "Deaktiver SocialFocus på YouTube",
-                "pl": "Wyłącz SocialFocus na YouTube",
-                "pt": "Desative o SocialFocus no YouTube",
-                "ro": "Dezactivează SocialFocus pe YouTube",
-                "ru": "Отключить SocialFocus на YouTube",
-                "sk": "Zakázať SocialFocus na YouTube",
-                "es": "Deshabilitar SocialFocus en YouTube",
-                "sv": "Inaktivera SocialFocus på YouTube",
-                "th": "ปิดการใช้งาน SocialFocus บน YouTube",
-                "tr": "YouTube'da SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на YouTube",
-                "vi": "Tắt SocialFocus trên YouTube"
+                "it": "Disattiva ForkFocus su YouTube",
+                "ja": "YouTube で ForkFocus を無効にする",
+                "ko": "YouTube에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada YouTube",
+                "no": "Deaktiver ForkFocus på YouTube",
+                "pl": "Wyłącz ForkFocus na YouTube",
+                "pt": "Desative o ForkFocus no YouTube",
+                "ro": "Dezactivează ForkFocus pe YouTube",
+                "ru": "Отключить ForkFocus на YouTube",
+                "sk": "Zakázať ForkFocus na YouTube",
+                "es": "Deshabilitar ForkFocus en YouTube",
+                "sv": "Inaktivera ForkFocus på YouTube",
+                "th": "ปิดการใช้งาน ForkFocus บน YouTube",
+                "tr": "YouTube'da ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на YouTube",
+                "vi": "Tắt ForkFocus trên YouTube"
               },
               "id": "socialFocus_youtube_master_toggle",
               "defaultValue": false
@@ -165,7 +165,9 @@
               },
               "id": "socialFocus_youtube_block_youtube",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -206,7 +208,9 @@
               },
               "id": "socialFocus_youtube_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -449,7 +453,21 @@
               },
               "id": "socialFocus_youtube_hide_home_recommended_videos",
               "defaultValue": false,
-              "styles": ["ytd-browse[page-subtype=\"home\"]"]
+              "styles": [
+                "ytd-browse[page-subtype=\"home\"]"
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": {
+                "da": "Skjul Mest relevant på abonnementssiden",
+                "en": "Hide Most Relevant on Subscriptions Page"
+              },
+              "id": "socialFocus_youtube_hide_subscriptions_most_relevant",
+              "defaultValue": false,
+              "styles": [
+                "ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[has-expansion-button][show-bottom-divider] ytd-rich-item-renderer[is-shelf-item])"
+              ]
             },
             {
               "type": "checkbox",
@@ -534,7 +552,9 @@
               },
               "id": "socialFocus_youtube_hide_related_videos",
               "defaultValue": false,
-              "styles": ["ytd-watch-next-secondary-results-renderer"]
+              "styles": [
+                "ytd-watch-next-secondary-results-renderer"
+              ]
             },
             {
               "type": "checkbox",
@@ -630,7 +650,10 @@
               },
               "id": "socialFocus_youtube_hide_comments",
               "defaultValue": false,
-              "styles": ["#comments", "#comment-teaser"]
+              "styles": [
+                "#comments",
+                "#comment-teaser"
+              ]
             },
             {
               "type": "checkbox",
@@ -929,45 +952,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "youtube",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على موقع يوتيوب",
-                "ca": "Desactiva SocialFocus a YouTube",
-                "zh-CN": "在 YouTube 上禁用 SocialFocus",
-                "zh-TW": "在 YouTube 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na YouTubeu",
-                "cs": "Zakázat SocialFocus na YouTube",
-                "da": "Deaktiver SocialFocus på YouTube",
-                "nl": "Schakel SocialFocus uit op YouTube",
-                "en": "Disable SocialFocus on YouTube",
-                "fi": "Poista SocialFocus käytöstä YouTubessa",
-                "fr": "Désactivez SocialFocus sur YouTube",
-                "de": "Deaktivieren Sie SocialFocus auf YouTube",
-                "el": "Απενεργοποιήστε το SocialFocus στο YouTube",
-                "he": "השבת את SocialFocus ב-YouTube",
+                "ca": "Desactiva ForkFocus a YouTube",
+                "zh-CN": "在 YouTube 上禁用 ForkFocus",
+                "zh-TW": "在 YouTube 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na YouTubeu",
+                "cs": "Zakázat ForkFocus na YouTube",
+                "da": "Deaktiver ForkFocus på YouTube",
+                "nl": "Schakel ForkFocus uit op YouTube",
+                "en": "Disable ForkFocus on YouTube",
+                "fi": "Poista ForkFocus käytöstä YouTubessa",
+                "fr": "Désactivez ForkFocus sur YouTube",
+                "de": "Deaktivieren Sie ForkFocus auf YouTube",
+                "el": "Απενεργοποιήστε το ForkFocus στο YouTube",
+                "he": "השבת את ForkFocus ב-YouTube",
                 "hi": "यूट्यूब पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a YouTube-on",
+                "hu": "A ForkFocus letiltása a YouTube-on",
                 "id": "Nonaktifkan Fokus Sosial di YouTube",
-                "it": "Disattiva SocialFocus su YouTube",
-                "ja": "YouTube で SocialFocus を無効にする",
-                "ko": "YouTube에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada YouTube",
-                "no": "Deaktiver SocialFocus på YouTube",
-                "pl": "Wyłącz SocialFocus na YouTube",
-                "pt": "Desative o SocialFocus no YouTube",
-                "ro": "Dezactivează SocialFocus pe YouTube",
-                "ru": "Отключить SocialFocus на YouTube",
-                "sk": "Zakázať SocialFocus na YouTube",
-                "es": "Deshabilitar SocialFocus en YouTube",
-                "sv": "Inaktivera SocialFocus på YouTube",
-                "th": "ปิดการใช้งาน SocialFocus บน YouTube",
-                "tr": "YouTube'da SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на YouTube",
-                "vi": "Tắt SocialFocus trên YouTube"
+                "it": "Disattiva ForkFocus su YouTube",
+                "ja": "YouTube で ForkFocus を無効にする",
+                "ko": "YouTube에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada YouTube",
+                "no": "Deaktiver ForkFocus på YouTube",
+                "pl": "Wyłącz ForkFocus na YouTube",
+                "pt": "Desative o ForkFocus no YouTube",
+                "ro": "Dezactivează ForkFocus pe YouTube",
+                "ru": "Отключить ForkFocus на YouTube",
+                "sk": "Zakázať ForkFocus na YouTube",
+                "es": "Deshabilitar ForkFocus en YouTube",
+                "sv": "Inaktivera ForkFocus på YouTube",
+                "th": "ปิดการใช้งาน ForkFocus บน YouTube",
+                "tr": "YouTube'da ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на YouTube",
+                "vi": "Tắt ForkFocus trên YouTube"
               },
               "id": "socialFocus_youtube_master_toggle",
               "defaultValue": false
@@ -1052,7 +1075,9 @@
               },
               "id": "socialFocus_youtube_block_youtube",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -1093,7 +1118,9 @@
               },
               "id": "socialFocus_youtube_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -1725,45 +1752,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "facebook",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على الفيسبوك",
-                "ca": "Desactiveu SocialFocus a Facebook",
-                "zh-CN": "在 Facebook 上禁用 SocialFocus",
-                "zh-TW": "在 Facebook 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Facebooku",
-                "cs": "Zakázat SocialFocus na Facebooku",
-                "da": "Deaktiver SocialFocus på Facebook",
-                "nl": "Schakel SocialFocus uit op Facebook",
-                "en": "Disable SocialFocus on Facebook",
-                "fi": "Poista SocialFocus käytöstä Facebookissa",
-                "fr": "Désactivez SocialFocus sur Facebook",
-                "de": "Deaktivieren Sie SocialFocus auf Facebook",
-                "el": "Απενεργοποιήστε το SocialFocus στο Facebook",
-                "he": "השבת את SocialFocus בפייסבוק",
+                "ca": "Desactiveu ForkFocus a Facebook",
+                "zh-CN": "在 Facebook 上禁用 ForkFocus",
+                "zh-TW": "在 Facebook 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Facebooku",
+                "cs": "Zakázat ForkFocus na Facebooku",
+                "da": "Deaktiver ForkFocus på Facebook",
+                "nl": "Schakel ForkFocus uit op Facebook",
+                "en": "Disable ForkFocus on Facebook",
+                "fi": "Poista ForkFocus käytöstä Facebookissa",
+                "fr": "Désactivez ForkFocus sur Facebook",
+                "de": "Deaktivieren Sie ForkFocus auf Facebook",
+                "el": "Απενεργοποιήστε το ForkFocus στο Facebook",
+                "he": "השבת את ForkFocus בפייסבוק",
                 "hi": "फेसबुक पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Facebookon",
+                "hu": "A ForkFocus letiltása a Facebookon",
                 "id": "Nonaktifkan Fokus Sosial di Facebook",
-                "it": "Disattiva SocialFocus su Facebook",
-                "ja": "Facebook で SocialFocus を無効にする",
-                "ko": "Facebook에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Facebook",
-                "no": "Deaktiver SocialFocus på Facebook",
-                "pl": "Wyłącz SocialFocus na Facebooku",
-                "pt": "Desative o SocialFocus no Facebook",
-                "ro": "Dezactivează SocialFocus pe Facebook",
-                "ru": "Отключить SocialFocus на Facebook",
-                "sk": "Zakázať SocialFocus na Facebooku",
-                "es": "Deshabilitar SocialFocus en Facebook",
-                "sv": "Inaktivera SocialFocus på Facebook",
-                "th": "ปิดการใช้งาน SocialFocus บน Facebook",
-                "tr": "Facebook'ta SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus у Facebook",
-                "vi": "Tắt SocialFocus trên Facebook"
+                "it": "Disattiva ForkFocus su Facebook",
+                "ja": "Facebook で ForkFocus を無効にする",
+                "ko": "Facebook에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Facebook",
+                "no": "Deaktiver ForkFocus på Facebook",
+                "pl": "Wyłącz ForkFocus na Facebooku",
+                "pt": "Desative o ForkFocus no Facebook",
+                "ro": "Dezactivează ForkFocus pe Facebook",
+                "ru": "Отключить ForkFocus на Facebook",
+                "sk": "Zakázať ForkFocus na Facebooku",
+                "es": "Deshabilitar ForkFocus en Facebook",
+                "sv": "Inaktivera ForkFocus på Facebook",
+                "th": "ปิดการใช้งาน ForkFocus บน Facebook",
+                "tr": "Facebook'ta ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus у Facebook",
+                "vi": "Tắt ForkFocus trên Facebook"
               },
               "id": "socialFocus_facebook_master_toggle",
               "defaultValue": false
@@ -1848,7 +1875,9 @@
               },
               "id": "socialFocus_facebook_block_facebook",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -1889,7 +1918,9 @@
               },
               "id": "socialFocus_facebook_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -3034,7 +3065,9 @@
               },
               "id": "socialFocus_facebook_left_bar_hide_button_saved",
               "defaultValue": false,
-              "styles": ["div[role=\"navigation\"]:has(h2) a[href*=\"saved\"]"]
+              "styles": [
+                "div[role=\"navigation\"]:has(h2) a[href*=\"saved\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -3075,7 +3108,9 @@
               },
               "id": "socialFocus_facebook_left_bar_hide_button_groups",
               "defaultValue": false,
-              "styles": ["div[role=\"navigation\"]:has(h2) a[href*=\"groups\"]"]
+              "styles": [
+                "div[role=\"navigation\"]:has(h2) a[href*=\"groups\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -3116,7 +3151,9 @@
               },
               "id": "socialFocus_facebook_left_bar_hide_button_video",
               "defaultValue": false,
-              "styles": ["div[role=\"navigation\"]:has(h2) a[href*=\"reel\"]"]
+              "styles": [
+                "div[role=\"navigation\"]:has(h2) a[href*=\"reel\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -3200,7 +3237,9 @@
               },
               "id": "socialFocus_facebook_left_bar_hide_button_feeds",
               "defaultValue": false,
-              "styles": ["div[role=\"navigation\"]:has(h2) a[href*=\"filter\"]"]
+              "styles": [
+                "div[role=\"navigation\"]:has(h2) a[href*=\"filter\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -3241,7 +3280,9 @@
               },
               "id": "socialFocus_facebook_left_bar_hide_button_events",
               "defaultValue": false,
-              "styles": ["div[role=\"navigation\"]:has(h2) a[href*=\"events\"]"]
+              "styles": [
+                "div[role=\"navigation\"]:has(h2) a[href*=\"events\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -3282,7 +3323,9 @@
               },
               "id": "socialFocus_facebook_left_bar_hide_button_ads_manager",
               "defaultValue": false,
-              "styles": ["div[role=\"navigation\"]:has(h2) a[href*=\"ad_\"]"]
+              "styles": [
+                "div[role=\"navigation\"]:has(h2) a[href*=\"ad_\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -3366,7 +3409,9 @@
               },
               "id": "socialFocus_facebook_left_bar_hide_button_see_more",
               "defaultValue": false,
-              "styles": ["div[role=\"navigation\"]:has(h2) ul + div"]
+              "styles": [
+                "div[role=\"navigation\"]:has(h2) ul + div"
+              ]
             },
             {
               "type": "checkbox",
@@ -3407,7 +3452,9 @@
               },
               "id": "socialFocus_facebook_left_bar_hide_footer",
               "defaultValue": false,
-              "styles": ["div[role=\"navigation\"] footer"]
+              "styles": [
+                "div[role=\"navigation\"] footer"
+              ]
             }
           ]
         },
@@ -3703,45 +3750,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "facebook",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على الفيسبوك",
-                "ca": "Desactiveu SocialFocus a Facebook",
-                "zh-CN": "在 Facebook 上禁用 SocialFocus",
-                "zh-TW": "在 Facebook 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Facebooku",
-                "cs": "Zakázat SocialFocus na Facebooku",
-                "da": "Deaktiver SocialFocus på Facebook",
-                "nl": "Schakel SocialFocus uit op Facebook",
-                "en": "Disable SocialFocus on Facebook",
-                "fi": "Poista SocialFocus käytöstä Facebookissa",
-                "fr": "Désactivez SocialFocus sur Facebook",
-                "de": "Deaktivieren Sie SocialFocus auf Facebook",
-                "el": "Απενεργοποιήστε το SocialFocus στο Facebook",
-                "he": "השבת את SocialFocus בפייסבוק",
+                "ca": "Desactiveu ForkFocus a Facebook",
+                "zh-CN": "在 Facebook 上禁用 ForkFocus",
+                "zh-TW": "在 Facebook 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Facebooku",
+                "cs": "Zakázat ForkFocus na Facebooku",
+                "da": "Deaktiver ForkFocus på Facebook",
+                "nl": "Schakel ForkFocus uit op Facebook",
+                "en": "Disable ForkFocus on Facebook",
+                "fi": "Poista ForkFocus käytöstä Facebookissa",
+                "fr": "Désactivez ForkFocus sur Facebook",
+                "de": "Deaktivieren Sie ForkFocus auf Facebook",
+                "el": "Απενεργοποιήστε το ForkFocus στο Facebook",
+                "he": "השבת את ForkFocus בפייסבוק",
                 "hi": "फेसबुक पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Facebookon",
+                "hu": "A ForkFocus letiltása a Facebookon",
                 "id": "Nonaktifkan Fokus Sosial di Facebook",
-                "it": "Disattiva SocialFocus su Facebook",
-                "ja": "Facebook で SocialFocus を無効にする",
-                "ko": "Facebook에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Facebook",
-                "no": "Deaktiver SocialFocus på Facebook",
-                "pl": "Wyłącz SocialFocus na Facebooku",
-                "pt": "Desative o SocialFocus no Facebook",
-                "ro": "Dezactivează SocialFocus pe Facebook",
-                "ru": "Отключить SocialFocus на Facebook",
-                "sk": "Zakázať SocialFocus na Facebooku",
-                "es": "Deshabilitar SocialFocus en Facebook",
-                "sv": "Inaktivera SocialFocus på Facebook",
-                "th": "ปิดการใช้งาน SocialFocus บน Facebook",
-                "tr": "Facebook'ta SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus у Facebook",
-                "vi": "Tắt SocialFocus trên Facebook"
+                "it": "Disattiva ForkFocus su Facebook",
+                "ja": "Facebook で ForkFocus を無効にする",
+                "ko": "Facebook에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Facebook",
+                "no": "Deaktiver ForkFocus på Facebook",
+                "pl": "Wyłącz ForkFocus na Facebooku",
+                "pt": "Desative o ForkFocus no Facebook",
+                "ro": "Dezactivează ForkFocus pe Facebook",
+                "ru": "Отключить ForkFocus на Facebook",
+                "sk": "Zakázať ForkFocus na Facebooku",
+                "es": "Deshabilitar ForkFocus en Facebook",
+                "sv": "Inaktivera ForkFocus på Facebook",
+                "th": "ปิดการใช้งาน ForkFocus บน Facebook",
+                "tr": "Facebook'ta ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus у Facebook",
+                "vi": "Tắt ForkFocus trên Facebook"
               },
               "id": "socialFocus_facebook_master_toggle",
               "defaultValue": false
@@ -3826,7 +3873,9 @@
               },
               "id": "socialFocus_facebook_block_facebook",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -3867,7 +3916,9 @@
               },
               "id": "socialFocus_facebook_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -4819,45 +4870,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "instagram",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على Instagram",
-                "ca": "Desactiveu SocialFocus a Instagram",
-                "zh-CN": "在 Instagram 上禁用 SocialFocus",
-                "zh-TW": "在 Instagram 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Instagramu",
-                "cs": "Vypněte SocialFocus na Instagramu",
-                "da": "Deaktiver SocialFocus på Instagram",
-                "nl": "Schakel SocialFocus uit op Instagram",
-                "en": "Disable SocialFocus on Instagram",
-                "fi": "Poista SocialFocus käytöstä Instagramissa",
-                "fr": "Désactivez SocialFocus sur Instagram",
-                "de": "Deaktivieren Sie SocialFocus auf Instagram",
-                "el": "Απενεργοποιήστε το SocialFocus στο Instagram",
-                "he": "השבת את SocialFocus באינסטגרם",
+                "ca": "Desactiveu ForkFocus a Instagram",
+                "zh-CN": "在 Instagram 上禁用 ForkFocus",
+                "zh-TW": "在 Instagram 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Instagramu",
+                "cs": "Vypněte ForkFocus na Instagramu",
+                "da": "Deaktiver ForkFocus på Instagram",
+                "nl": "Schakel ForkFocus uit op Instagram",
+                "en": "Disable ForkFocus on Instagram",
+                "fi": "Poista ForkFocus käytöstä Instagramissa",
+                "fr": "Désactivez ForkFocus sur Instagram",
+                "de": "Deaktivieren Sie ForkFocus auf Instagram",
+                "el": "Απενεργοποιήστε το ForkFocus στο Instagram",
+                "he": "השבת את ForkFocus באינסטגרם",
                 "hi": "इंस्टाग्राम पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása az Instagramon",
+                "hu": "A ForkFocus letiltása az Instagramon",
                 "id": "Nonaktifkan Fokus Sosial di Instagram",
-                "it": "Disattiva SocialFocus su Instagram",
-                "ja": "Instagram で SocialFocus を無効にする",
-                "ko": "Instagram에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Instagram",
-                "no": "Deaktiver SocialFocus på Instagram",
-                "pl": "Wyłącz SocialFocus na Instagramie",
-                "pt": "Desative o SocialFocus no Instagram",
-                "ro": "Dezactivează SocialFocus pe Instagram",
-                "ru": "Отключить SocialFocus в Instagram",
-                "sk": "Zakázať SocialFocus na Instagrame",
-                "es": "Deshabilitar SocialFocus en Instagram",
-                "sv": "Inaktivera SocialFocus på Instagram",
-                "th": "ปิดการใช้งาน SocialFocus บน Instagram",
-                "tr": "Instagram'da SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus в Instagram",
-                "vi": "Tắt SocialFocus trên Instagram"
+                "it": "Disattiva ForkFocus su Instagram",
+                "ja": "Instagram で ForkFocus を無効にする",
+                "ko": "Instagram에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Instagram",
+                "no": "Deaktiver ForkFocus på Instagram",
+                "pl": "Wyłącz ForkFocus na Instagramie",
+                "pt": "Desative o ForkFocus no Instagram",
+                "ro": "Dezactivează ForkFocus pe Instagram",
+                "ru": "Отключить ForkFocus в Instagram",
+                "sk": "Zakázať ForkFocus na Instagrame",
+                "es": "Deshabilitar ForkFocus en Instagram",
+                "sv": "Inaktivera ForkFocus på Instagram",
+                "th": "ปิดการใช้งาน ForkFocus บน Instagram",
+                "tr": "Instagram'da ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus в Instagram",
+                "vi": "Tắt ForkFocus trên Instagram"
               },
               "id": "socialFocus_instagram_master_toggle",
               "defaultValue": false
@@ -4942,7 +4993,9 @@
               },
               "id": "socialFocus_instagram_block_instagram",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -4983,7 +5036,9 @@
               },
               "id": "socialFocus_instagram_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -5273,7 +5328,9 @@
               },
               "id": "socialFocus_instagram_feed_hide_stories",
               "defaultValue": false,
-              "styles": ["div[data-pagelet=\"story_tray\"]"]
+              "styles": [
+                "div[data-pagelet=\"story_tray\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -5401,7 +5458,9 @@
               },
               "id": "socialFocus_instagram_feed_hide_footer",
               "defaultValue": false,
-              "styles": ["footer"]
+              "styles": [
+                "footer"
+              ]
             }
           ]
         },
@@ -5869,7 +5928,9 @@
               },
               "id": "socialFocus_instagram_rightBar_hide_suggested_users_block",
               "defaultValue": false,
-              "styles": ["div:has(> div > a[href*=\"explore/people\"])"]
+              "styles": [
+                "div:has(> div > a[href*=\"explore/people\"])"
+              ]
             },
             {
               "type": "checkbox",
@@ -5910,7 +5971,9 @@
               },
               "id": "socialFocus_instagram_rightBar_hide_footer",
               "defaultValue": false,
-              "styles": ["div:has(> div > nav)"]
+              "styles": [
+                "div:has(> div > nav)"
+              ]
             }
           ]
         },
@@ -6037,45 +6100,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "instagram",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على Instagram",
-                "ca": "Desactiveu SocialFocus a Instagram",
-                "zh-CN": "在 Instagram 上禁用 SocialFocus",
-                "zh-TW": "在 Instagram 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Instagramu",
-                "cs": "Vypněte SocialFocus na Instagramu",
-                "da": "Deaktiver SocialFocus på Instagram",
-                "nl": "Schakel SocialFocus uit op Instagram",
-                "en": "Disable SocialFocus on Instagram",
-                "fi": "Poista SocialFocus käytöstä Instagramissa",
-                "fr": "Désactivez SocialFocus sur Instagram",
-                "de": "Deaktivieren Sie SocialFocus auf Instagram",
-                "el": "Απενεργοποιήστε το SocialFocus στο Instagram",
-                "he": "השבת את SocialFocus באינסטגרם",
+                "ca": "Desactiveu ForkFocus a Instagram",
+                "zh-CN": "在 Instagram 上禁用 ForkFocus",
+                "zh-TW": "在 Instagram 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Instagramu",
+                "cs": "Vypněte ForkFocus na Instagramu",
+                "da": "Deaktiver ForkFocus på Instagram",
+                "nl": "Schakel ForkFocus uit op Instagram",
+                "en": "Disable ForkFocus on Instagram",
+                "fi": "Poista ForkFocus käytöstä Instagramissa",
+                "fr": "Désactivez ForkFocus sur Instagram",
+                "de": "Deaktivieren Sie ForkFocus auf Instagram",
+                "el": "Απενεργοποιήστε το ForkFocus στο Instagram",
+                "he": "השבת את ForkFocus באינסטגרם",
                 "hi": "इंस्टाग्राम पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása az Instagramon",
+                "hu": "A ForkFocus letiltása az Instagramon",
                 "id": "Nonaktifkan Fokus Sosial di Instagram",
-                "it": "Disattiva SocialFocus su Instagram",
-                "ja": "Instagram で SocialFocus を無効にする",
-                "ko": "Instagram에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Instagram",
-                "no": "Deaktiver SocialFocus på Instagram",
-                "pl": "Wyłącz SocialFocus na Instagramie",
-                "pt": "Desative o SocialFocus no Instagram",
-                "ro": "Dezactivează SocialFocus pe Instagram",
-                "ru": "Отключить SocialFocus в Instagram",
-                "sk": "Zakázať SocialFocus na Instagrame",
-                "es": "Deshabilitar SocialFocus en Instagram",
-                "sv": "Inaktivera SocialFocus på Instagram",
-                "th": "ปิดการใช้งาน SocialFocus บน Instagram",
-                "tr": "Instagram'da SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus в Instagram",
-                "vi": "Tắt SocialFocus trên Instagram"
+                "it": "Disattiva ForkFocus su Instagram",
+                "ja": "Instagram で ForkFocus を無効にする",
+                "ko": "Instagram에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Instagram",
+                "no": "Deaktiver ForkFocus på Instagram",
+                "pl": "Wyłącz ForkFocus na Instagramie",
+                "pt": "Desative o ForkFocus no Instagram",
+                "ro": "Dezactivează ForkFocus pe Instagram",
+                "ru": "Отключить ForkFocus в Instagram",
+                "sk": "Zakázať ForkFocus na Instagrame",
+                "es": "Deshabilitar ForkFocus en Instagram",
+                "sv": "Inaktivera ForkFocus på Instagram",
+                "th": "ปิดการใช้งาน ForkFocus บน Instagram",
+                "tr": "Instagram'da ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus в Instagram",
+                "vi": "Tắt ForkFocus trên Instagram"
               },
               "id": "socialFocus_instagram_master_toggle",
               "defaultValue": false
@@ -6160,7 +6223,9 @@
               },
               "id": "socialFocus_instagram_block_instagram",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -6201,7 +6266,9 @@
               },
               "id": "socialFocus_instagram_gray_mode",
               "defaultValue": false,
-              "styles": ["html{ filter: grayscale(1) !important; }"]
+              "styles": [
+                "html{ filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -6664,7 +6731,9 @@
               },
               "id": "socialFocus_instagram_navBar_hide_button_explore",
               "defaultValue": false,
-              "styles": ["a[href*=\"explore\"]"]
+              "styles": [
+                "a[href*=\"explore\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -6705,7 +6774,9 @@
               },
               "id": "socialFocus_instagram_navBar_hide_button_reels",
               "defaultValue": false,
-              "styles": ["a[href*=\"reels\"]"]
+              "styles": [
+                "a[href*=\"reels\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -6746,7 +6817,9 @@
               },
               "id": "socialFocus_instagram_navBar_hide_button_messenger",
               "defaultValue": false,
-              "styles": ["a[href*=\"/direct/inbox/\"]"]
+              "styles": [
+                "a[href*=\"/direct/inbox/\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -6830,7 +6903,9 @@
               },
               "id": "socialFocus_instagram_navBar_hide_button_threads",
               "defaultValue": false,
-              "styles": ["a[href*=\"threads.net\"]"]
+              "styles": [
+                "a[href*=\"threads.net\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -7047,45 +7122,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "linkedin",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على LinkedIn",
-                "ca": "Desactiveu SocialFocus a LinkedIn",
-                "zh-CN": "在 LinkedIn 上禁用 SocialFocus",
-                "zh-TW": "在 LinkedIn 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na LinkedInu",
-                "cs": "Zakažte SocialFocus na LinkedIn",
-                "da": "Deaktiver SocialFocus på LinkedIn",
-                "nl": "Schakel SocialFocus uit op LinkedIn",
-                "en": "Disable SocialFocus on LinkedIn",
-                "fi": "Poista SocialFocus käytöstä LinkedInissä",
-                "fr": "Désactiver SocialFocus sur LinkedIn",
-                "de": "Deaktivieren Sie SocialFocus auf LinkedIn",
-                "el": "Απενεργοποιήστε το SocialFocus στο LinkedIn",
-                "he": "השבת את SocialFocus בלינקדאין",
+                "ca": "Desactiveu ForkFocus a LinkedIn",
+                "zh-CN": "在 LinkedIn 上禁用 ForkFocus",
+                "zh-TW": "在 LinkedIn 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na LinkedInu",
+                "cs": "Zakažte ForkFocus na LinkedIn",
+                "da": "Deaktiver ForkFocus på LinkedIn",
+                "nl": "Schakel ForkFocus uit op LinkedIn",
+                "en": "Disable ForkFocus on LinkedIn",
+                "fi": "Poista ForkFocus käytöstä LinkedInissä",
+                "fr": "Désactiver ForkFocus sur LinkedIn",
+                "de": "Deaktivieren Sie ForkFocus auf LinkedIn",
+                "el": "Απενεργοποιήστε το ForkFocus στο LinkedIn",
+                "he": "השבת את ForkFocus בלינקדאין",
                 "hi": "लिंक्डइन पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a LinkedIn-en",
+                "hu": "A ForkFocus letiltása a LinkedIn-en",
                 "id": "Nonaktifkan Fokus Sosial di LinkedIn",
-                "it": "Disattiva SocialFocus su LinkedIn",
-                "ja": "LinkedIn で SocialFocus を無効にする",
-                "ko": "LinkedIn에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada LinkedIn",
-                "no": "Deaktiver SocialFocus på LinkedIn",
-                "pl": "Wyłącz SocialFocus na LinkedIn",
-                "pt": "Desative o SocialFocus no LinkedIn",
-                "ro": "Dezactivați SocialFocus pe LinkedIn",
-                "ru": "Отключить SocialFocus в LinkedIn",
-                "sk": "Zakázať SocialFocus na LinkedIn",
-                "es": "Deshabilitar SocialFocus en LinkedIn",
-                "sv": "Inaktivera SocialFocus på LinkedIn",
-                "th": "ปิดการใช้งาน SocialFocus บน LinkedIn",
-                "tr": "LinkedIn'de SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus у LinkedIn",
-                "vi": "Tắt SocialFocus trên LinkedIn"
+                "it": "Disattiva ForkFocus su LinkedIn",
+                "ja": "LinkedIn で ForkFocus を無効にする",
+                "ko": "LinkedIn에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada LinkedIn",
+                "no": "Deaktiver ForkFocus på LinkedIn",
+                "pl": "Wyłącz ForkFocus na LinkedIn",
+                "pt": "Desative o ForkFocus no LinkedIn",
+                "ro": "Dezactivați ForkFocus pe LinkedIn",
+                "ru": "Отключить ForkFocus в LinkedIn",
+                "sk": "Zakázať ForkFocus na LinkedIn",
+                "es": "Deshabilitar ForkFocus en LinkedIn",
+                "sv": "Inaktivera ForkFocus på LinkedIn",
+                "th": "ปิดการใช้งาน ForkFocus บน LinkedIn",
+                "tr": "LinkedIn'de ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus у LinkedIn",
+                "vi": "Tắt ForkFocus trên LinkedIn"
               },
               "id": "socialFocus_linkedin_master_toggle",
               "defaultValue": false
@@ -7170,7 +7245,9 @@
               },
               "id": "socialFocus_linkedin_block_linkedin",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -7211,7 +7288,9 @@
               },
               "id": "socialFocus_linkedin_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -7674,7 +7753,9 @@
               },
               "id": "socialFocus_linkedin_rightBar_hide_sidebar_follows_list",
               "defaultValue": false,
-              "styles": ["section:has(> div[id*=\"pymk_recommendation\"])"]
+              "styles": [
+                "section:has(> div[id*=\"pymk_recommendation\"])"
+              ]
             },
             {
               "type": "checkbox",
@@ -8239,7 +8320,9 @@
               },
               "id": "socialFocus_linkedin_other_hide_messaging_popup",
               "defaultValue": false,
-              "styles": ["aside#msg-overlay"]
+              "styles": [
+                "aside#msg-overlay"
+              ]
             }
           ]
         }
@@ -8281,45 +8364,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "linkedin",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على LinkedIn",
-                "ca": "Desactiveu SocialFocus a LinkedIn",
-                "zh-CN": "在 LinkedIn 上禁用 SocialFocus",
-                "zh-TW": "在 LinkedIn 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na LinkedInu",
-                "cs": "Zakažte SocialFocus na LinkedIn",
-                "da": "Deaktiver SocialFocus på LinkedIn",
-                "nl": "Schakel SocialFocus uit op LinkedIn",
-                "en": "Disable SocialFocus on LinkedIn",
-                "fi": "Poista SocialFocus käytöstä LinkedInissä",
-                "fr": "Désactiver SocialFocus sur LinkedIn",
-                "de": "Deaktivieren Sie SocialFocus auf LinkedIn",
-                "el": "Απενεργοποιήστε το SocialFocus στο LinkedIn",
-                "he": "השבת את SocialFocus בלינקדאין",
+                "ca": "Desactiveu ForkFocus a LinkedIn",
+                "zh-CN": "在 LinkedIn 上禁用 ForkFocus",
+                "zh-TW": "在 LinkedIn 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na LinkedInu",
+                "cs": "Zakažte ForkFocus na LinkedIn",
+                "da": "Deaktiver ForkFocus på LinkedIn",
+                "nl": "Schakel ForkFocus uit op LinkedIn",
+                "en": "Disable ForkFocus on LinkedIn",
+                "fi": "Poista ForkFocus käytöstä LinkedInissä",
+                "fr": "Désactiver ForkFocus sur LinkedIn",
+                "de": "Deaktivieren Sie ForkFocus auf LinkedIn",
+                "el": "Απενεργοποιήστε το ForkFocus στο LinkedIn",
+                "he": "השבת את ForkFocus בלינקדאין",
                 "hi": "लिंक्डइन पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a LinkedIn-en",
+                "hu": "A ForkFocus letiltása a LinkedIn-en",
                 "id": "Nonaktifkan Fokus Sosial di LinkedIn",
-                "it": "Disattiva SocialFocus su LinkedIn",
-                "ja": "LinkedIn で SocialFocus を無効にする",
-                "ko": "LinkedIn에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada LinkedIn",
-                "no": "Deaktiver SocialFocus på LinkedIn",
-                "pl": "Wyłącz SocialFocus na LinkedIn",
-                "pt": "Desative o SocialFocus no LinkedIn",
-                "ro": "Dezactivați SocialFocus pe LinkedIn",
-                "ru": "Отключить SocialFocus в LinkedIn",
-                "sk": "Zakázať SocialFocus na LinkedIn",
-                "es": "Deshabilitar SocialFocus en LinkedIn",
-                "sv": "Inaktivera SocialFocus på LinkedIn",
-                "th": "ปิดการใช้งาน SocialFocus บน LinkedIn",
-                "tr": "LinkedIn'de SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus у LinkedIn",
-                "vi": "Tắt SocialFocus trên LinkedIn"
+                "it": "Disattiva ForkFocus su LinkedIn",
+                "ja": "LinkedIn で ForkFocus を無効にする",
+                "ko": "LinkedIn에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada LinkedIn",
+                "no": "Deaktiver ForkFocus på LinkedIn",
+                "pl": "Wyłącz ForkFocus na LinkedIn",
+                "pt": "Desative o ForkFocus no LinkedIn",
+                "ro": "Dezactivați ForkFocus pe LinkedIn",
+                "ru": "Отключить ForkFocus в LinkedIn",
+                "sk": "Zakázať ForkFocus na LinkedIn",
+                "es": "Deshabilitar ForkFocus en LinkedIn",
+                "sv": "Inaktivera ForkFocus på LinkedIn",
+                "th": "ปิดการใช้งาน ForkFocus บน LinkedIn",
+                "tr": "LinkedIn'de ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus у LinkedIn",
+                "vi": "Tắt ForkFocus trên LinkedIn"
               },
               "id": "socialFocus_linkedin_master_toggle",
               "defaultValue": false
@@ -8404,7 +8487,9 @@
               },
               "id": "socialFocus_linkedin_block_linkedin",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -8445,7 +8530,9 @@
               },
               "id": "socialFocus_linkedin_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -8688,7 +8775,9 @@
               },
               "id": "socialFocus_linkedin_home_feed_hide_home_feed",
               "defaultValue": false,
-              "styles": [".feeds"]
+              "styles": [
+                ".feeds"
+              ]
             },
             {
               "type": "checkbox",
@@ -8772,7 +8861,9 @@
               },
               "id": "socialFocus_linkedin_home_feed_hide_post_bottom_buttons",
               "defaultValue": false,
-              "styles": [".feeds .feed-item .social-action-bar"]
+              "styles": [
+                ".feeds .feed-item .social-action-bar"
+              ]
             },
             {
               "type": "checkbox",
@@ -8897,7 +8988,9 @@
               },
               "id": "socialFocus_linkedin_bottomBar_hide_button_home",
               "defaultValue": false,
-              "styles": ["#primary-nav li[data-nav-type=\"HOME\"]"]
+              "styles": [
+                "#primary-nav li[data-nav-type=\"HOME\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -8938,7 +9031,9 @@
               },
               "id": "socialFocus_linkedin_bottomBar_hide_button_my_network",
               "defaultValue": false,
-              "styles": ["#primary-nav li[data-nav-type=\"NETWORK\"]"]
+              "styles": [
+                "#primary-nav li[data-nav-type=\"NETWORK\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -8979,7 +9074,9 @@
               },
               "id": "socialFocus_linkedin_bottomBar_hide_button_post",
               "defaultValue": false,
-              "styles": ["#primary-nav li[data-nav-type=\"POST\"]"]
+              "styles": [
+                "#primary-nav li[data-nav-type=\"POST\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -9020,7 +9117,9 @@
               },
               "id": "socialFocus_linkedin_bottomBar_hide_button_notifications",
               "defaultValue": false,
-              "styles": ["#primary-nav li[data-nav-type=\"NOTIFICATIONS\"]"]
+              "styles": [
+                "#primary-nav li[data-nav-type=\"NOTIFICATIONS\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -9061,7 +9160,9 @@
               },
               "id": "socialFocus_linkedin_bottomBar_hide_button_jobs",
               "defaultValue": false,
-              "styles": ["#primary-nav li[data-nav-type=\"JOBS\"]"]
+              "styles": [
+                "#primary-nav li[data-nav-type=\"JOBS\"]"
+              ]
             }
           ]
         },
@@ -9194,45 +9295,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "reddit",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على Reddit",
-                "ca": "Desactiveu SocialFocus a Reddit",
-                "zh-CN": "在 Reddit 上禁用 SocialFocus",
-                "zh-TW": "在 Reddit 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Redditu",
-                "cs": "Zakažte SocialFocus na Redditu",
-                "da": "Deaktiver SocialFocus på Reddit",
-                "nl": "Schakel SocialFocus uit op Reddit",
-                "en": "Disable SocialFocus on Reddit",
-                "fi": "Poista SocialFocus käytöstä Redditissä",
-                "fr": "Désactivez SocialFocus sur Reddit",
-                "de": "Deaktivieren Sie SocialFocus auf Reddit",
-                "el": "Απενεργοποιήστε το SocialFocus στο Reddit",
-                "he": "השבת את SocialFocus ב-Reddit",
-                "hi": "Reddit पर SocialFocus अक्षम करें",
-                "hu": "A SocialFocus letiltása a Redditen",
+                "ca": "Desactiveu ForkFocus a Reddit",
+                "zh-CN": "在 Reddit 上禁用 ForkFocus",
+                "zh-TW": "在 Reddit 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Redditu",
+                "cs": "Zakažte ForkFocus na Redditu",
+                "da": "Deaktiver ForkFocus på Reddit",
+                "nl": "Schakel ForkFocus uit op Reddit",
+                "en": "Disable ForkFocus on Reddit",
+                "fi": "Poista ForkFocus käytöstä Redditissä",
+                "fr": "Désactivez ForkFocus sur Reddit",
+                "de": "Deaktivieren Sie ForkFocus auf Reddit",
+                "el": "Απενεργοποιήστε το ForkFocus στο Reddit",
+                "he": "השבת את ForkFocus ב-Reddit",
+                "hi": "Reddit पर ForkFocus अक्षम करें",
+                "hu": "A ForkFocus letiltása a Redditen",
                 "id": "Nonaktifkan Fokus Sosial di Reddit",
-                "it": "Disabilita SocialFocus su Reddit",
-                "ja": "Reddit で SocialFocus を無効にする",
-                "ko": "Reddit에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Reddit",
-                "no": "Deaktiver SocialFocus på Reddit",
-                "pl": "Wyłącz SocialFocus na Reddicie",
-                "pt": "Desative o SocialFocus no Reddit",
-                "ro": "Dezactivează SocialFocus pe Reddit",
-                "ru": "Отключить SocialFocus на Reddit",
-                "sk": "Zakázať SocialFocus na Reddite",
-                "es": "Deshabilitar SocialFocus en Reddit",
-                "sv": "Inaktivera SocialFocus på Reddit",
-                "th": "ปิดการใช้งาน SocialFocus บน Reddit",
-                "tr": "Reddit'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Reddit",
-                "vi": "Tắt SocialFocus trên Reddit"
+                "it": "Disabilita ForkFocus su Reddit",
+                "ja": "Reddit で ForkFocus を無効にする",
+                "ko": "Reddit에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Reddit",
+                "no": "Deaktiver ForkFocus på Reddit",
+                "pl": "Wyłącz ForkFocus na Reddicie",
+                "pt": "Desative o ForkFocus no Reddit",
+                "ro": "Dezactivează ForkFocus pe Reddit",
+                "ru": "Отключить ForkFocus на Reddit",
+                "sk": "Zakázať ForkFocus na Reddite",
+                "es": "Deshabilitar ForkFocus en Reddit",
+                "sv": "Inaktivera ForkFocus på Reddit",
+                "th": "ปิดการใช้งาน ForkFocus บน Reddit",
+                "tr": "Reddit'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Reddit",
+                "vi": "Tắt ForkFocus trên Reddit"
               },
               "id": "socialFocus_reddit_master_toggle",
               "defaultValue": false
@@ -9317,7 +9418,9 @@
               },
               "id": "socialFocus_reddit_block_reddit",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -9358,7 +9461,9 @@
               },
               "id": "socialFocus_reddit_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -9774,7 +9879,9 @@
               },
               "id": "socialFocus_reddit_rightBar_hide_reddit_premium_box",
               "defaultValue": false,
-              "styles": [".side .spacer:has(> .premium-banner-outer)"]
+              "styles": [
+                ".side .spacer:has(> .premium-banner-outer)"
+              ]
             },
             {
               "type": "checkbox",
@@ -9815,7 +9922,9 @@
               },
               "id": "socialFocus_reddit_rightBar_hide_recent_posts_box",
               "defaultValue": false,
-              "styles": ["#right-sidebar-container recent-posts"]
+              "styles": [
+                "#right-sidebar-container recent-posts"
+              ]
             },
             {
               "type": "checkbox",
@@ -10492,7 +10601,9 @@
               },
               "id": "socialFocus_reddit_header_hide_logo_wordmark",
               "defaultValue": false,
-              "styles": ["header #reddit-logo svg[style*=\"wordmark\"]"]
+              "styles": [
+                "header #reddit-logo svg[style*=\"wordmark\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -10533,7 +10644,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_advertise",
               "defaultValue": false,
-              "styles": ["header [data-part=\"advertise\"]"]
+              "styles": [
+                "header [data-part=\"advertise\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -10574,7 +10687,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_chat",
               "defaultValue": false,
-              "styles": ["header [data-part=\"chat\"]"]
+              "styles": [
+                "header [data-part=\"chat\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -10615,7 +10730,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_create_post",
               "defaultValue": false,
-              "styles": ["header [data-part=\"create\"]"]
+              "styles": [
+                "header [data-part=\"create\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -10656,7 +10773,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_notifications",
               "defaultValue": false,
-              "styles": ["header [data-part=\"inbox\"]"]
+              "styles": [
+                "header [data-part=\"inbox\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -10697,7 +10816,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_settings_menu",
               "defaultValue": false,
-              "styles": ["header span[data-part=\"primary\"] + div"]
+              "styles": [
+                "header span[data-part=\"primary\"] + div"
+              ]
             },
             {
               "type": "checkbox",
@@ -10738,7 +10859,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_get_app",
               "defaultValue": false,
-              "styles": ["header #get-app"]
+              "styles": [
+                "header #get-app"
+              ]
             },
             {
               "type": "checkbox",
@@ -10779,7 +10902,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_log_in",
               "defaultValue": false,
-              "styles": ["header faceplate-tracker[noun=\"login\"]"]
+              "styles": [
+                "header faceplate-tracker[noun=\"login\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -11206,45 +11331,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "reddit",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على Reddit",
-                "ca": "Desactiveu SocialFocus a Reddit",
-                "zh-CN": "在 Reddit 上禁用 SocialFocus",
-                "zh-TW": "在 Reddit 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Redditu",
-                "cs": "Zakažte SocialFocus na Redditu",
-                "da": "Deaktiver SocialFocus på Reddit",
-                "nl": "Schakel SocialFocus uit op Reddit",
-                "en": "Disable SocialFocus on Reddit",
-                "fi": "Poista SocialFocus käytöstä Redditissä",
-                "fr": "Désactivez SocialFocus sur Reddit",
-                "de": "Deaktivieren Sie SocialFocus auf Reddit",
-                "el": "Απενεργοποιήστε το SocialFocus στο Reddit",
-                "he": "השבת את SocialFocus ב-Reddit",
-                "hi": "Reddit पर SocialFocus अक्षम करें",
-                "hu": "A SocialFocus letiltása a Redditen",
+                "ca": "Desactiveu ForkFocus a Reddit",
+                "zh-CN": "在 Reddit 上禁用 ForkFocus",
+                "zh-TW": "在 Reddit 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Redditu",
+                "cs": "Zakažte ForkFocus na Redditu",
+                "da": "Deaktiver ForkFocus på Reddit",
+                "nl": "Schakel ForkFocus uit op Reddit",
+                "en": "Disable ForkFocus on Reddit",
+                "fi": "Poista ForkFocus käytöstä Redditissä",
+                "fr": "Désactivez ForkFocus sur Reddit",
+                "de": "Deaktivieren Sie ForkFocus auf Reddit",
+                "el": "Απενεργοποιήστε το ForkFocus στο Reddit",
+                "he": "השבת את ForkFocus ב-Reddit",
+                "hi": "Reddit पर ForkFocus अक्षम करें",
+                "hu": "A ForkFocus letiltása a Redditen",
                 "id": "Nonaktifkan Fokus Sosial di Reddit",
-                "it": "Disabilita SocialFocus su Reddit",
-                "ja": "Reddit で SocialFocus を無効にする",
-                "ko": "Reddit에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Reddit",
-                "no": "Deaktiver SocialFocus på Reddit",
-                "pl": "Wyłącz SocialFocus na Reddicie",
-                "pt": "Desative o SocialFocus no Reddit",
-                "ro": "Dezactivează SocialFocus pe Reddit",
-                "ru": "Отключить SocialFocus на Reddit",
-                "sk": "Zakázať SocialFocus na Reddite",
-                "es": "Deshabilitar SocialFocus en Reddit",
-                "sv": "Inaktivera SocialFocus på Reddit",
-                "th": "ปิดการใช้งาน SocialFocus บน Reddit",
-                "tr": "Reddit'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Reddit",
-                "vi": "Tắt SocialFocus trên Reddit"
+                "it": "Disabilita ForkFocus su Reddit",
+                "ja": "Reddit で ForkFocus を無効にする",
+                "ko": "Reddit에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Reddit",
+                "no": "Deaktiver ForkFocus på Reddit",
+                "pl": "Wyłącz ForkFocus na Reddicie",
+                "pt": "Desative o ForkFocus no Reddit",
+                "ro": "Dezactivează ForkFocus pe Reddit",
+                "ru": "Отключить ForkFocus на Reddit",
+                "sk": "Zakázať ForkFocus na Reddite",
+                "es": "Deshabilitar ForkFocus en Reddit",
+                "sv": "Inaktivera ForkFocus på Reddit",
+                "th": "ปิดการใช้งาน ForkFocus บน Reddit",
+                "tr": "Reddit'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Reddit",
+                "vi": "Tắt ForkFocus trên Reddit"
               },
               "id": "socialFocus_reddit_master_toggle",
               "defaultValue": false
@@ -11329,7 +11454,9 @@
               },
               "id": "socialFocus_reddit_block_reddit",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -11370,7 +11497,9 @@
               },
               "id": "socialFocus_reddit_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -11656,7 +11785,9 @@
               },
               "id": "socialFocus_reddit_home_feed_hide_related_posts",
               "defaultValue": false,
-              "styles": ["shreddit-feed article:has([recommendation-source])"]
+              "styles": [
+                "shreddit-feed article:has([recommendation-source])"
+              ]
             }
           ]
         },
@@ -11738,7 +11869,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_burger",
               "defaultValue": false,
-              "styles": ["header faceplate-tracker[noun=\"hamburger_menu\"]"]
+              "styles": [
+                "header faceplate-tracker[noun=\"hamburger_menu\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -11779,7 +11912,9 @@
               },
               "id": "socialFocus_reddit_header_hide_logo",
               "defaultValue": false,
-              "styles": ["header faceplate-tracker[noun=\"reddit_logo\"]"]
+              "styles": [
+                "header faceplate-tracker[noun=\"reddit_logo\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -11820,7 +11955,9 @@
               },
               "id": "socialFocus_reddit_header_hide_log_in_button",
               "defaultValue": false,
-              "styles": ["header faceplate-tracker[noun=\"auth_header_login\"]"]
+              "styles": [
+                "header faceplate-tracker[noun=\"auth_header_login\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -11861,7 +11998,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_search",
               "defaultValue": false,
-              "styles": ["header button#expand-search-button"]
+              "styles": [
+                "header button#expand-search-button"
+              ]
             },
             {
               "type": "checkbox",
@@ -11902,7 +12041,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_create_post",
               "defaultValue": false,
-              "styles": ["header faceplate-tracker[noun=\"create_post\"]"]
+              "styles": [
+                "header faceplate-tracker[noun=\"create_post\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -11987,7 +12128,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_settings_menu",
               "defaultValue": false,
-              "styles": ["header button#expand-user-drawer-button"]
+              "styles": [
+                "header button#expand-user-drawer-button"
+              ]
             },
             {
               "type": "checkbox",
@@ -12028,7 +12171,9 @@
               },
               "id": "socialFocus_reddit_header_hide_button_use_app",
               "defaultValue": false,
-              "styles": ["header xpromo-top-button[app-link-params]"]
+              "styles": [
+                "header xpromo-top-button[app-link-params]"
+              ]
             },
             {
               "type": "checkbox",
@@ -12150,7 +12295,9 @@
               },
               "id": "socialFocus_reddit_subreddit_hide_subreddit_feed",
               "defaultValue": false,
-              "styles": ["html:has(.community-banner) main > div"]
+              "styles": [
+                "html:has(.community-banner) main > div"
+              ]
             },
             {
               "type": "checkbox",
@@ -12608,7 +12755,9 @@
               },
               "id": "socialFocus_reddit_hide_open_in_app_banner",
               "defaultValue": false,
-              "styles": ["faceplate-bottom-sheet#xpromo-bottom-sheet"]
+              "styles": [
+                "faceplate-bottom-sheet#xpromo-bottom-sheet"
+              ]
             }
           ]
         }
@@ -12655,45 +12804,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "twitter",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على X",
-                "ca": "Desactiveu SocialFocus a X",
-                "zh-CN": "在 X 上禁用 SocialFocus",
-                "zh-TW": "在 X 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na X",
-                "cs": "Zakázat SocialFocus na X",
-                "da": "Deaktiver SocialFocus on X",
-                "nl": "Schakel SocialFocus uit op X",
-                "en": "Disable SocialFocus on X",
-                "fi": "Poista SocialFocus käytöstä X:ssä",
-                "fr": "Désactiver SocialFocus sur X",
-                "de": "Deaktivieren Sie SocialFocus auf X",
-                "el": "Απενεργοποιήστε το SocialFocus στο X",
-                "he": "השבת את SocialFocus ב-X",
+                "ca": "Desactiveu ForkFocus a X",
+                "zh-CN": "在 X 上禁用 ForkFocus",
+                "zh-TW": "在 X 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na X",
+                "cs": "Zakázat ForkFocus na X",
+                "da": "Deaktiver ForkFocus on X",
+                "nl": "Schakel ForkFocus uit op X",
+                "en": "Disable ForkFocus on X",
+                "fi": "Poista ForkFocus käytöstä X:ssä",
+                "fr": "Désactiver ForkFocus sur X",
+                "de": "Deaktivieren Sie ForkFocus auf X",
+                "el": "Απενεργοποιήστε το ForkFocus στο X",
+                "he": "השבת את ForkFocus ב-X",
                 "hi": "एक्स पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása X-en",
+                "hu": "A ForkFocus letiltása X-en",
                 "id": "Nonaktifkan Fokus Sosial di X",
-                "it": "Disabilita SocialFocus su X",
-                "ja": "X で SocialFocus を無効にする",
-                "ko": "X에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada X",
-                "no": "Deaktiver SocialFocus on X",
-                "pl": "Wyłącz SocialFocus na X",
-                "pt": "Desativar SocialFocus no X",
-                "ro": "Dezactivați SocialFocus pe X",
-                "ru": "Отключить SocialFocus на X",
-                "sk": "Zakázať SocialFocus na X",
-                "es": "Deshabilitar SocialFocus en X",
-                "sv": "Inaktivera SocialFocus on X",
-                "th": "ปิดการใช้งาน SocialFocus บน X",
-                "tr": "X'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на X",
-                "vi": "Tắt SocialFocus trên X"
+                "it": "Disabilita ForkFocus su X",
+                "ja": "X で ForkFocus を無効にする",
+                "ko": "X에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada X",
+                "no": "Deaktiver ForkFocus on X",
+                "pl": "Wyłącz ForkFocus na X",
+                "pt": "Desativar ForkFocus no X",
+                "ro": "Dezactivați ForkFocus pe X",
+                "ru": "Отключить ForkFocus на X",
+                "sk": "Zakázať ForkFocus na X",
+                "es": "Deshabilitar ForkFocus en X",
+                "sv": "Inaktivera ForkFocus on X",
+                "th": "ปิดการใช้งาน ForkFocus บน X",
+                "tr": "X'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на X",
+                "vi": "Tắt ForkFocus trên X"
               },
               "id": "socialFocus_twitter_master_toggle",
               "defaultValue": false
@@ -12778,7 +12927,9 @@
               },
               "id": "socialFocus_twitter_block_twitter",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -12819,7 +12970,9 @@
               },
               "id": "socialFocus_twitter_gray_mode",
               "defaultValue": false,
-              "styles": ["html:{ filter: grayscale(1) !important; }"]
+              "styles": [
+                "html:{ filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -13150,7 +13303,9 @@
               },
               "id": "socialFocus_twitter_feed_hide_button_timeline_settings",
               "defaultValue": false,
-              "styles": ["a[href*=\"home/pinned/edit\"]"]
+              "styles": [
+                "a[href*=\"home/pinned/edit\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -13234,7 +13389,9 @@
               },
               "id": "socialFocus_twitter_feed_hide_posted_float_button",
               "defaultValue": false,
-              "styles": ["div[role=\"status\"] button"]
+              "styles": [
+                "div[role=\"status\"] button"
+              ]
             },
             {
               "type": "checkbox",
@@ -13701,7 +13858,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_home_notifications_dot",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] > a svg + div"]
+              "styles": [
+                "nav[role=\"navigation\"] > a svg + div"
+              ]
             },
             {
               "type": "checkbox",
@@ -13742,7 +13901,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_explore",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"explore\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"explore\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -13783,7 +13944,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_notifications",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"notifications\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"notifications\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -13867,7 +14030,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_messages",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"chat\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"chat\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -13908,7 +14073,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_grok",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"grok\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"grok\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -13949,7 +14116,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_list",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"lists\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"lists\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -13990,7 +14159,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_bookmarks",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"bookmarks\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"bookmarks\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -14031,7 +14202,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_jobs_button",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"jobs\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"jobs\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -14072,7 +14245,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_communities",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"communities\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"communities\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -14113,7 +14288,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_verified",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"premium\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"premium\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -14154,7 +14331,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_verified_orgs_button",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"verified-orgs\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"verified-orgs\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -14195,7 +14374,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_profile",
               "defaultValue": false,
-              "styles": ["a[data-testid=\"AppTabBar_Profile_Link\"]"]
+              "styles": [
+                "a[data-testid=\"AppTabBar_Profile_Link\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -14236,7 +14417,9 @@
               },
               "id": "socialFocus_twitter_navigationBar_hide_button_more",
               "defaultValue": false,
-              "styles": ["button[data-testid=\"AppTabBar_More_Menu\"]"]
+              "styles": [
+                "button[data-testid=\"AppTabBar_More_Menu\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -14404,7 +14587,9 @@
               },
               "id": "socialFocus_twitter_rightBar_hide_premium_ads",
               "defaultValue": false,
-              "styles": ["div:has(> aside a[href*=\"premium_sign_up\"])"]
+              "styles": [
+                "div:has(> aside a[href*=\"premium_sign_up\"])"
+              ]
             },
             {
               "type": "checkbox",
@@ -14488,7 +14673,9 @@
               },
               "id": "socialFocus_twitter_rightBar_hide_who_to_follow",
               "defaultValue": false,
-              "styles": ["div:has(> div>aside>a[href*=\"connect_people\"])"]
+              "styles": [
+                "div:has(> div>aside>a[href*=\"connect_people\"])"
+              ]
             },
             {
               "type": "checkbox",
@@ -14616,45 +14803,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "twitter",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على X",
-                "ca": "Desactiveu SocialFocus a X",
-                "zh-CN": "在 X 上禁用 SocialFocus",
-                "zh-TW": "在 X 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na X",
-                "cs": "Zakázat SocialFocus na X",
-                "da": "Deaktiver SocialFocus on X",
-                "nl": "Schakel SocialFocus uit op X",
-                "en": "Disable SocialFocus on X",
-                "fi": "Poista SocialFocus käytöstä X:ssä",
-                "fr": "Désactiver SocialFocus sur X",
-                "de": "Deaktivieren Sie SocialFocus auf X",
-                "el": "Απενεργοποιήστε το SocialFocus στο X",
-                "he": "השבת את SocialFocus ב-X",
+                "ca": "Desactiveu ForkFocus a X",
+                "zh-CN": "在 X 上禁用 ForkFocus",
+                "zh-TW": "在 X 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na X",
+                "cs": "Zakázat ForkFocus na X",
+                "da": "Deaktiver ForkFocus on X",
+                "nl": "Schakel ForkFocus uit op X",
+                "en": "Disable ForkFocus on X",
+                "fi": "Poista ForkFocus käytöstä X:ssä",
+                "fr": "Désactiver ForkFocus sur X",
+                "de": "Deaktivieren Sie ForkFocus auf X",
+                "el": "Απενεργοποιήστε το ForkFocus στο X",
+                "he": "השבת את ForkFocus ב-X",
                 "hi": "एक्स पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása X-en",
+                "hu": "A ForkFocus letiltása X-en",
                 "id": "Nonaktifkan Fokus Sosial di X",
-                "it": "Disabilita SocialFocus su X",
-                "ja": "X で SocialFocus を無効にする",
-                "ko": "X에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada X",
-                "no": "Deaktiver SocialFocus on X",
-                "pl": "Wyłącz SocialFocus na X",
-                "pt": "Desativar SocialFocus no X",
-                "ro": "Dezactivați SocialFocus pe X",
-                "ru": "Отключить SocialFocus на X",
-                "sk": "Zakázať SocialFocus na X",
-                "es": "Deshabilitar SocialFocus en X",
-                "sv": "Inaktivera SocialFocus on X",
-                "th": "ปิดการใช้งาน SocialFocus บน X",
-                "tr": "X'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на X",
-                "vi": "Tắt SocialFocus trên X"
+                "it": "Disabilita ForkFocus su X",
+                "ja": "X で ForkFocus を無効にする",
+                "ko": "X에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada X",
+                "no": "Deaktiver ForkFocus on X",
+                "pl": "Wyłącz ForkFocus na X",
+                "pt": "Desativar ForkFocus no X",
+                "ro": "Dezactivați ForkFocus pe X",
+                "ru": "Отключить ForkFocus на X",
+                "sk": "Zakázať ForkFocus na X",
+                "es": "Deshabilitar ForkFocus en X",
+                "sv": "Inaktivera ForkFocus on X",
+                "th": "ปิดการใช้งาน ForkFocus บน X",
+                "tr": "X'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на X",
+                "vi": "Tắt ForkFocus trên X"
               },
               "id": "socialFocus_twitter_master_toggle",
               "defaultValue": false
@@ -14739,7 +14926,9 @@
               },
               "id": "socialFocus_twitter_block_twitter",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -14780,7 +14969,9 @@
               },
               "id": "socialFocus_twitter_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -15109,7 +15300,9 @@
               },
               "id": "socialFocus_twitter_feed_hide_button_timeline_settings",
               "defaultValue": false,
-              "styles": ["a[href*=\"home/pinned/edit\"]"]
+              "styles": [
+                "a[href*=\"home/pinned/edit\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -15150,7 +15343,9 @@
               },
               "id": "socialFocus_twitter_feed_hide_posted_float_button",
               "defaultValue": false,
-              "styles": ["div[role=\"status\"] button"]
+              "styles": [
+                "div[role=\"status\"] button"
+              ]
             },
             {
               "type": "checkbox",
@@ -15957,7 +16152,9 @@
               },
               "id": "socialFocus_twitter_other_hide_floating_new_tweet",
               "defaultValue": false,
-              "styles": ["div[data-testid=\"FloatingActionButtonBase\"]"]
+              "styles": [
+                "div[data-testid=\"FloatingActionButtonBase\"]"
+              ]
             }
           ]
         }
@@ -16004,45 +16201,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "gmail",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على Gmail",
-                "ca": "Desactiveu SocialFocus a Gmail",
-                "zh-CN": "在 Gmail 上禁用 SocialFocus",
-                "zh-TW": "在 Gmail 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Gmailu",
-                "cs": "Zakázat SocialFocus na Gmailu",
-                "da": "Deaktiver SocialFocus på Gmail",
-                "nl": "Schakel SocialFocus uit in Gmail",
-                "en": "Disable SocialFocus on Gmail",
-                "fi": "Poista SocialFocus käytöstä Gmailissa",
-                "fr": "Désactiver SocialFocus sur Gmail",
-                "de": "Deaktivieren Sie SocialFocus in Gmail",
-                "el": "Απενεργοποιήστε το SocialFocus στο Gmail",
-                "he": "השבת את SocialFocus ב-Gmail",
+                "ca": "Desactiveu ForkFocus a Gmail",
+                "zh-CN": "在 Gmail 上禁用 ForkFocus",
+                "zh-TW": "在 Gmail 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Gmailu",
+                "cs": "Zakázat ForkFocus na Gmailu",
+                "da": "Deaktiver ForkFocus på Gmail",
+                "nl": "Schakel ForkFocus uit in Gmail",
+                "en": "Disable ForkFocus on Gmail",
+                "fi": "Poista ForkFocus käytöstä Gmailissa",
+                "fr": "Désactiver ForkFocus sur Gmail",
+                "de": "Deaktivieren Sie ForkFocus in Gmail",
+                "el": "Απενεργοποιήστε το ForkFocus στο Gmail",
+                "he": "השבת את ForkFocus ב-Gmail",
                 "hi": "जीमेल पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Gmailben",
+                "hu": "A ForkFocus letiltása a Gmailben",
                 "id": "Nonaktifkan Fokus Sosial di Gmail",
-                "it": "Disattiva SocialFocus su Gmail",
-                "ja": "Gmail で SocialFocus を無効にする",
-                "ko": "Gmail에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Gmail",
-                "no": "Deaktiver SocialFocus på Gmail",
-                "pl": "Wyłącz SocialFocus w Gmailu",
-                "pt": "Desative o SocialFocus no Gmail",
-                "ro": "Dezactivați SocialFocus pe Gmail",
-                "ru": "Отключить SocialFocus в Gmail",
-                "sk": "Zakázať SocialFocus v Gmaile",
-                "es": "Deshabilitar SocialFocus en Gmail",
-                "sv": "Inaktivera SocialFocus på Gmail",
-                "th": "ปิดการใช้งาน SocialFocus บน Gmail",
-                "tr": "Gmail'de SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus у Gmail",
-                "vi": "Tắt SocialFocus trên Gmail"
+                "it": "Disattiva ForkFocus su Gmail",
+                "ja": "Gmail で ForkFocus を無効にする",
+                "ko": "Gmail에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Gmail",
+                "no": "Deaktiver ForkFocus på Gmail",
+                "pl": "Wyłącz ForkFocus w Gmailu",
+                "pt": "Desative o ForkFocus no Gmail",
+                "ro": "Dezactivați ForkFocus pe Gmail",
+                "ru": "Отключить ForkFocus в Gmail",
+                "sk": "Zakázať ForkFocus v Gmaile",
+                "es": "Deshabilitar ForkFocus en Gmail",
+                "sv": "Inaktivera ForkFocus på Gmail",
+                "th": "ปิดการใช้งาน ForkFocus บน Gmail",
+                "tr": "Gmail'de ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus у Gmail",
+                "vi": "Tắt ForkFocus trên Gmail"
               },
               "id": "socialFocus_gmail_master_toggle",
               "defaultValue": false
@@ -16127,7 +16324,9 @@
               },
               "id": "socialFocus_gmail_block_gmail",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -16168,7 +16367,9 @@
               },
               "id": "socialFocus_gmail_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -16712,45 +16913,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "gmail",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على Gmail",
-                "ca": "Desactiveu SocialFocus a Gmail",
-                "zh-CN": "在 Gmail 上禁用 SocialFocus",
-                "zh-TW": "在 Gmail 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Gmailu",
-                "cs": "Zakázat SocialFocus na Gmailu",
-                "da": "Deaktiver SocialFocus på Gmail",
-                "nl": "Schakel SocialFocus uit in Gmail",
-                "en": "Disable SocialFocus on Gmail",
-                "fi": "Poista SocialFocus käytöstä Gmailissa",
-                "fr": "Désactiver SocialFocus sur Gmail",
-                "de": "Deaktivieren Sie SocialFocus in Gmail",
-                "el": "Απενεργοποιήστε το SocialFocus στο Gmail",
-                "he": "השבת את SocialFocus ב-Gmail",
+                "ca": "Desactiveu ForkFocus a Gmail",
+                "zh-CN": "在 Gmail 上禁用 ForkFocus",
+                "zh-TW": "在 Gmail 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Gmailu",
+                "cs": "Zakázat ForkFocus na Gmailu",
+                "da": "Deaktiver ForkFocus på Gmail",
+                "nl": "Schakel ForkFocus uit in Gmail",
+                "en": "Disable ForkFocus on Gmail",
+                "fi": "Poista ForkFocus käytöstä Gmailissa",
+                "fr": "Désactiver ForkFocus sur Gmail",
+                "de": "Deaktivieren Sie ForkFocus in Gmail",
+                "el": "Απενεργοποιήστε το ForkFocus στο Gmail",
+                "he": "השבת את ForkFocus ב-Gmail",
                 "hi": "जीमेल पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Gmailben",
+                "hu": "A ForkFocus letiltása a Gmailben",
                 "id": "Nonaktifkan Fokus Sosial di Gmail",
-                "it": "Disattiva SocialFocus su Gmail",
-                "ja": "Gmail で SocialFocus を無効にする",
-                "ko": "Gmail에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Gmail",
-                "no": "Deaktiver SocialFocus på Gmail",
-                "pl": "Wyłącz SocialFocus w Gmailu",
-                "pt": "Desative o SocialFocus no Gmail",
-                "ro": "Dezactivați SocialFocus pe Gmail",
-                "ru": "Отключить SocialFocus в Gmail",
-                "sk": "Zakázať SocialFocus v Gmaile",
-                "es": "Deshabilitar SocialFocus en Gmail",
-                "sv": "Inaktivera SocialFocus på Gmail",
-                "th": "ปิดการใช้งาน SocialFocus บน Gmail",
-                "tr": "Gmail'de SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus у Gmail",
-                "vi": "Tắt SocialFocus trên Gmail"
+                "it": "Disattiva ForkFocus su Gmail",
+                "ja": "Gmail で ForkFocus を無効にする",
+                "ko": "Gmail에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Gmail",
+                "no": "Deaktiver ForkFocus på Gmail",
+                "pl": "Wyłącz ForkFocus w Gmailu",
+                "pt": "Desative o ForkFocus no Gmail",
+                "ro": "Dezactivați ForkFocus pe Gmail",
+                "ru": "Отключить ForkFocus в Gmail",
+                "sk": "Zakázať ForkFocus v Gmaile",
+                "es": "Deshabilitar ForkFocus en Gmail",
+                "sv": "Inaktivera ForkFocus på Gmail",
+                "th": "ปิดการใช้งาน ForkFocus บน Gmail",
+                "tr": "Gmail'de ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus у Gmail",
+                "vi": "Tắt ForkFocus trên Gmail"
               },
               "id": "socialFocus_gmail_master_toggle",
               "defaultValue": false
@@ -16835,7 +17036,9 @@
               },
               "id": "socialFocus_gmail_block_gmail",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -16876,7 +17079,9 @@
               },
               "id": "socialFocus_gmail_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -17119,7 +17324,10 @@
               },
               "id": "socialFocus_gmail_hide_ads",
               "defaultValue": false,
-              "styles": ["div#sdppromo", "div#views { top: 96px !important; }"]
+              "styles": [
+                "div#sdppromo",
+                "div#views { top: 96px !important; }"
+              ]
             },
             {
               "type": "checkbox",
@@ -17211,45 +17419,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "hackerNews",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على HackerNews",
-                "ca": "Desactiveu SocialFocus a HackerNews",
-                "zh-CN": "在 HackerNews 上禁用 SocialFocus",
-                "zh-TW": "在 HackerNews 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na HackerNewsu",
-                "cs": "Zakažte SocialFocus na HackerNews",
-                "da": "Deaktiver SocialFocus på HackerNews",
-                "nl": "Schakel SocialFocus uit op HackerNews",
-                "en": "Disable SocialFocus on HackerNews",
-                "fi": "Poista SocialFocus käytöstä HackerNewsissa",
-                "fr": "Désactivez SocialFocus sur HackerNews",
-                "de": "Deaktivieren Sie SocialFocus auf HackerNews",
-                "el": "Απενεργοποιήστε το SocialFocus στο HackerNews",
-                "he": "השבת את SocialFocus ב-HackerNews",
-                "hi": "HackerNews पर SocialFocus अक्षम करें",
-                "hu": "A SocialFocus letiltása a HackerNews-on",
+                "ca": "Desactiveu ForkFocus a HackerNews",
+                "zh-CN": "在 HackerNews 上禁用 ForkFocus",
+                "zh-TW": "在 HackerNews 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na HackerNewsu",
+                "cs": "Zakažte ForkFocus na HackerNews",
+                "da": "Deaktiver ForkFocus på HackerNews",
+                "nl": "Schakel ForkFocus uit op HackerNews",
+                "en": "Disable ForkFocus on HackerNews",
+                "fi": "Poista ForkFocus käytöstä HackerNewsissa",
+                "fr": "Désactivez ForkFocus sur HackerNews",
+                "de": "Deaktivieren Sie ForkFocus auf HackerNews",
+                "el": "Απενεργοποιήστε το ForkFocus στο HackerNews",
+                "he": "השבת את ForkFocus ב-HackerNews",
+                "hi": "HackerNews पर ForkFocus अक्षम करें",
+                "hu": "A ForkFocus letiltása a HackerNews-on",
                 "id": "Nonaktifkan Fokus Sosial di HackerNews",
-                "it": "Disabilita SocialFocus su HackerNews",
-                "ja": "HackerNews で SocialFocus を無効にする",
-                "ko": "HackerNews에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada HackerNews",
-                "no": "Deaktiver SocialFocus på HackerNews",
-                "pl": "Wyłącz SocialFocus w HackerNews",
-                "pt": "Desative o SocialFocus no HackerNews",
-                "ro": "Dezactivați SocialFocus pe HackerNews",
-                "ru": "Отключить SocialFocus на HackerNews",
-                "sk": "Zakázať SocialFocus na HackerNews",
-                "es": "Deshabilitar SocialFocus en HackerNews",
-                "sv": "Inaktivera SocialFocus på HackerNews",
-                "th": "ปิดการใช้งาน SocialFocus บน HackerNews",
-                "tr": "HackerNews'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на HackerNews",
-                "vi": "Tắt SocialFocus trên HackerNews"
+                "it": "Disabilita ForkFocus su HackerNews",
+                "ja": "HackerNews で ForkFocus を無効にする",
+                "ko": "HackerNews에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada HackerNews",
+                "no": "Deaktiver ForkFocus på HackerNews",
+                "pl": "Wyłącz ForkFocus w HackerNews",
+                "pt": "Desative o ForkFocus no HackerNews",
+                "ro": "Dezactivați ForkFocus pe HackerNews",
+                "ru": "Отключить ForkFocus на HackerNews",
+                "sk": "Zakázať ForkFocus na HackerNews",
+                "es": "Deshabilitar ForkFocus en HackerNews",
+                "sv": "Inaktivera ForkFocus på HackerNews",
+                "th": "ปิดการใช้งาน ForkFocus บน HackerNews",
+                "tr": "HackerNews'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на HackerNews",
+                "vi": "Tắt ForkFocus trên HackerNews"
               },
               "id": "socialFocus_hacker-news_master_toggle",
               "defaultValue": false
@@ -17334,7 +17542,9 @@
               },
               "id": "socialFocus_hacker-news_block_hacker-news",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -17375,7 +17585,9 @@
               },
               "id": "socialFocus_hacker-news_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -17618,7 +17830,9 @@
               },
               "id": "socialFocus_hacker-news_navigation_hide_new",
               "defaultValue": false,
-              "styles": ["a[href=\"newest\"]"]
+              "styles": [
+                "a[href=\"newest\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -17659,7 +17873,9 @@
               },
               "id": "socialFocus_hacker-news_navigation_hide_past",
               "defaultValue": false,
-              "styles": ["a[href=\"front\"]"]
+              "styles": [
+                "a[href=\"front\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -17700,7 +17916,9 @@
               },
               "id": "socialFocus_hacker-news_navigation_hide_comments",
               "defaultValue": false,
-              "styles": ["a[href=\"newcomments\"]"]
+              "styles": [
+                "a[href=\"newcomments\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -17741,7 +17959,9 @@
               },
               "id": "socialFocus_hacker-news_navigation_hide_ask",
               "defaultValue": false,
-              "styles": ["a[href=\"ask\"]"]
+              "styles": [
+                "a[href=\"ask\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -17782,7 +18002,9 @@
               },
               "id": "socialFocus_hacker-news_navigation_hide_show",
               "defaultValue": false,
-              "styles": ["a[href=\"show\"]"]
+              "styles": [
+                "a[href=\"show\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -17823,7 +18045,9 @@
               },
               "id": "socialFocus_hacker-news_navigation_hide_jobs",
               "defaultValue": false,
-              "styles": ["a[href=\"jobs\"]"]
+              "styles": [
+                "a[href=\"jobs\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -17864,7 +18088,9 @@
               },
               "id": "socialFocus_hacker-news_navigation_hide_submit",
               "defaultValue": false,
-              "styles": ["a[href=\"submit\"]"]
+              "styles": [
+                "a[href=\"submit\"]"
+              ]
             }
           ]
         },
@@ -18119,7 +18345,9 @@
               },
               "id": "socialFocus_hacker-news_post_hide_time",
               "defaultValue": false,
-              "styles": ["html::not(:has(table.comment-tree)) span.age"]
+              "styles": [
+                "html::not(:has(table.comment-tree)) span.age"
+              ]
             },
             {
               "type": "checkbox",
@@ -18244,7 +18472,9 @@
               },
               "id": "socialFocus_hacker-news_comments_hide_comments",
               "defaultValue": false,
-              "styles": ["table.comment-tree"]
+              "styles": [
+                "table.comment-tree"
+              ]
             },
             {
               "type": "checkbox",
@@ -18285,7 +18515,9 @@
               },
               "id": "socialFocus_hacker-news_comments_hide_reply_buttons",
               "defaultValue": false,
-              "styles": ["div.reply"]
+              "styles": [
+                "div.reply"
+              ]
             }
           ]
         }
@@ -18327,45 +18559,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "hackerNews",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على HackerNews",
-                "ca": "Desactiveu SocialFocus a HackerNews",
-                "zh-CN": "在 HackerNews 上禁用 SocialFocus",
-                "zh-TW": "在 HackerNews 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na HackerNewsu",
-                "cs": "Zakažte SocialFocus na HackerNews",
-                "da": "Deaktiver SocialFocus på HackerNews",
-                "nl": "Schakel SocialFocus uit op HackerNews",
-                "en": "Disable SocialFocus on HackerNews",
-                "fi": "Poista SocialFocus käytöstä HackerNewsissa",
-                "fr": "Désactivez SocialFocus sur HackerNews",
-                "de": "Deaktivieren Sie SocialFocus auf HackerNews",
-                "el": "Απενεργοποιήστε το SocialFocus στο HackerNews",
-                "he": "השבת את SocialFocus ב-HackerNews",
-                "hi": "HackerNews पर SocialFocus अक्षम करें",
-                "hu": "A SocialFocus letiltása a HackerNews-on",
+                "ca": "Desactiveu ForkFocus a HackerNews",
+                "zh-CN": "在 HackerNews 上禁用 ForkFocus",
+                "zh-TW": "在 HackerNews 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na HackerNewsu",
+                "cs": "Zakažte ForkFocus na HackerNews",
+                "da": "Deaktiver ForkFocus på HackerNews",
+                "nl": "Schakel ForkFocus uit op HackerNews",
+                "en": "Disable ForkFocus on HackerNews",
+                "fi": "Poista ForkFocus käytöstä HackerNewsissa",
+                "fr": "Désactivez ForkFocus sur HackerNews",
+                "de": "Deaktivieren Sie ForkFocus auf HackerNews",
+                "el": "Απενεργοποιήστε το ForkFocus στο HackerNews",
+                "he": "השבת את ForkFocus ב-HackerNews",
+                "hi": "HackerNews पर ForkFocus अक्षम करें",
+                "hu": "A ForkFocus letiltása a HackerNews-on",
                 "id": "Nonaktifkan Fokus Sosial di HackerNews",
-                "it": "Disabilita SocialFocus su HackerNews",
-                "ja": "HackerNews で SocialFocus を無効にする",
-                "ko": "HackerNews에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada HackerNews",
-                "no": "Deaktiver SocialFocus på HackerNews",
-                "pl": "Wyłącz SocialFocus w HackerNews",
-                "pt": "Desative o SocialFocus no HackerNews",
-                "ro": "Dezactivați SocialFocus pe HackerNews",
-                "ru": "Отключить SocialFocus на HackerNews",
-                "sk": "Zakázať SocialFocus na HackerNews",
-                "es": "Deshabilitar SocialFocus en HackerNews",
-                "sv": "Inaktivera SocialFocus på HackerNews",
-                "th": "ปิดการใช้งาน SocialFocus บน HackerNews",
-                "tr": "HackerNews'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на HackerNews",
-                "vi": "Tắt SocialFocus trên HackerNews"
+                "it": "Disabilita ForkFocus su HackerNews",
+                "ja": "HackerNews で ForkFocus を無効にする",
+                "ko": "HackerNews에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada HackerNews",
+                "no": "Deaktiver ForkFocus på HackerNews",
+                "pl": "Wyłącz ForkFocus w HackerNews",
+                "pt": "Desative o ForkFocus no HackerNews",
+                "ro": "Dezactivați ForkFocus pe HackerNews",
+                "ru": "Отключить ForkFocus на HackerNews",
+                "sk": "Zakázať ForkFocus na HackerNews",
+                "es": "Deshabilitar ForkFocus en HackerNews",
+                "sv": "Inaktivera ForkFocus på HackerNews",
+                "th": "ปิดการใช้งาน ForkFocus บน HackerNews",
+                "tr": "HackerNews'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на HackerNews",
+                "vi": "Tắt ForkFocus trên HackerNews"
               },
               "id": "socialFocus_hacker-news_master_toggle",
               "defaultValue": false
@@ -19420,45 +19652,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "twitch",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على Twitch",
-                "ca": "Desactiveu SocialFocus a Twitch",
-                "zh-CN": "在 Twitch 上禁用 SocialFocus",
-                "zh-TW": "在 Twitch 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na Twitchu",
-                "cs": "Vypněte SocialFocus na Twitchi",
-                "da": "Deaktiver SocialFocus på Twitch",
-                "nl": "Schakel SocialFocus uit op Twitch",
-                "en": "Disable SocialFocus on Twitch",
-                "fi": "Poista SocialFocus käytöstä Twitchissä",
-                "fr": "Désactivez SocialFocus sur Twitch",
-                "de": "Deaktivieren Sie SocialFocus auf Twitch",
-                "el": "Απενεργοποιήστε το SocialFocus στο Twitch",
-                "he": "השבת את SocialFocus ב-Twitch",
+                "ca": "Desactiveu ForkFocus a Twitch",
+                "zh-CN": "在 Twitch 上禁用 ForkFocus",
+                "zh-TW": "在 Twitch 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na Twitchu",
+                "cs": "Vypněte ForkFocus na Twitchi",
+                "da": "Deaktiver ForkFocus på Twitch",
+                "nl": "Schakel ForkFocus uit op Twitch",
+                "en": "Disable ForkFocus on Twitch",
+                "fi": "Poista ForkFocus käytöstä Twitchissä",
+                "fr": "Désactivez ForkFocus sur Twitch",
+                "de": "Deaktivieren Sie ForkFocus auf Twitch",
+                "el": "Απενεργοποιήστε το ForkFocus στο Twitch",
+                "he": "השבת את ForkFocus ב-Twitch",
                 "hi": "ट्विच पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Twitchen",
+                "hu": "A ForkFocus letiltása a Twitchen",
                 "id": "Nonaktifkan Fokus Sosial di Twitch",
-                "it": "Disabilita SocialFocus su Twitch",
-                "ja": "Twitch で SocialFocus を無効にする",
-                "ko": "Twitch에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Twitch",
-                "no": "Deaktiver SocialFocus på Twitch",
-                "pl": "Wyłącz SocialFocus na Twitchu",
-                "pt": "Desative o SocialFocus no Twitch",
-                "ro": "Dezactivează SocialFocus pe Twitch",
-                "ru": "Отключить SocialFocus на Twitch",
-                "sk": "Zakázať SocialFocus na Twitchi",
-                "es": "Deshabilitar SocialFocus en Twitch",
-                "sv": "Inaktivera SocialFocus på Twitch",
-                "th": "ปิดการใช้งาน SocialFocus บน Twitch",
-                "tr": "Twitch'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Twitch",
-                "vi": "Tắt SocialFocus trên Twitch"
+                "it": "Disabilita ForkFocus su Twitch",
+                "ja": "Twitch で ForkFocus を無効にする",
+                "ko": "Twitch에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Twitch",
+                "no": "Deaktiver ForkFocus på Twitch",
+                "pl": "Wyłącz ForkFocus na Twitchu",
+                "pt": "Desative o ForkFocus no Twitch",
+                "ro": "Dezactivează ForkFocus pe Twitch",
+                "ru": "Отключить ForkFocus на Twitch",
+                "sk": "Zakázať ForkFocus na Twitchi",
+                "es": "Deshabilitar ForkFocus en Twitch",
+                "sv": "Inaktivera ForkFocus på Twitch",
+                "th": "ปิดการใช้งาน ForkFocus บน Twitch",
+                "tr": "Twitch'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Twitch",
+                "vi": "Tắt ForkFocus trên Twitch"
               },
               "id": "socialFocus_twitch_master_toggle",
               "defaultValue": false
@@ -19543,7 +19775,9 @@
               },
               "id": "socialFocus_twitch_block_twitch",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -19584,7 +19818,9 @@
               },
               "id": "socialFocus_twitch_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -20056,7 +20292,9 @@
               },
               "id": "socialFocus_twitch_hide_left_sidebar",
               "defaultValue": false,
-              "styles": ["div.side-nav"]
+              "styles": [
+                "div.side-nav"
+              ]
             },
             {
               "type": "checkbox",
@@ -20141,7 +20379,9 @@
               },
               "id": "socialFocus_twitch_hide_browse",
               "defaultValue": false,
-              "styles": ["a[href=\"/directory\"]"]
+              "styles": [
+                "a[href=\"/directory\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -20227,7 +20467,9 @@
               },
               "id": "socialFocus_twitch_hide_notifications",
               "defaultValue": false,
-              "styles": [".onsite-notifications"]
+              "styles": [
+                ".onsite-notifications"
+              ]
             },
             {
               "type": "checkbox",
@@ -20268,7 +20510,9 @@
               },
               "id": "socialFocus_twitch_hide_prime_loot",
               "defaultValue": false,
-              "styles": [".prime-offers"]
+              "styles": [
+                ".prime-offers"
+              ]
             },
             {
               "type": "checkbox",
@@ -20442,45 +20686,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "twitch",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على Twitch",
-                "ca": "Desactiveu SocialFocus a Twitch",
-                "zh-CN": "在 Twitch 上禁用 SocialFocus",
-                "zh-TW": "在 Twitch 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na Twitchu",
-                "cs": "Vypněte SocialFocus na Twitchi",
-                "da": "Deaktiver SocialFocus på Twitch",
-                "nl": "Schakel SocialFocus uit op Twitch",
-                "en": "Disable SocialFocus on Twitch",
-                "fi": "Poista SocialFocus käytöstä Twitchissä",
-                "fr": "Désactivez SocialFocus sur Twitch",
-                "de": "Deaktivieren Sie SocialFocus auf Twitch",
-                "el": "Απενεργοποιήστε το SocialFocus στο Twitch",
-                "he": "השבת את SocialFocus ב-Twitch",
+                "ca": "Desactiveu ForkFocus a Twitch",
+                "zh-CN": "在 Twitch 上禁用 ForkFocus",
+                "zh-TW": "在 Twitch 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na Twitchu",
+                "cs": "Vypněte ForkFocus na Twitchi",
+                "da": "Deaktiver ForkFocus på Twitch",
+                "nl": "Schakel ForkFocus uit op Twitch",
+                "en": "Disable ForkFocus on Twitch",
+                "fi": "Poista ForkFocus käytöstä Twitchissä",
+                "fr": "Désactivez ForkFocus sur Twitch",
+                "de": "Deaktivieren Sie ForkFocus auf Twitch",
+                "el": "Απενεργοποιήστε το ForkFocus στο Twitch",
+                "he": "השבת את ForkFocus ב-Twitch",
                 "hi": "ट्विच पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Twitchen",
+                "hu": "A ForkFocus letiltása a Twitchen",
                 "id": "Nonaktifkan Fokus Sosial di Twitch",
-                "it": "Disabilita SocialFocus su Twitch",
-                "ja": "Twitch で SocialFocus を無効にする",
-                "ko": "Twitch에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Twitch",
-                "no": "Deaktiver SocialFocus på Twitch",
-                "pl": "Wyłącz SocialFocus na Twitchu",
-                "pt": "Desative o SocialFocus no Twitch",
-                "ro": "Dezactivează SocialFocus pe Twitch",
-                "ru": "Отключить SocialFocus на Twitch",
-                "sk": "Zakázať SocialFocus na Twitchi",
-                "es": "Deshabilitar SocialFocus en Twitch",
-                "sv": "Inaktivera SocialFocus på Twitch",
-                "th": "ปิดการใช้งาน SocialFocus บน Twitch",
-                "tr": "Twitch'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Twitch",
-                "vi": "Tắt SocialFocus trên Twitch"
+                "it": "Disabilita ForkFocus su Twitch",
+                "ja": "Twitch で ForkFocus を無効にする",
+                "ko": "Twitch에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Twitch",
+                "no": "Deaktiver ForkFocus på Twitch",
+                "pl": "Wyłącz ForkFocus na Twitchu",
+                "pt": "Desative o ForkFocus no Twitch",
+                "ro": "Dezactivează ForkFocus pe Twitch",
+                "ru": "Отключить ForkFocus на Twitch",
+                "sk": "Zakázať ForkFocus na Twitchi",
+                "es": "Deshabilitar ForkFocus en Twitch",
+                "sv": "Inaktivera ForkFocus på Twitch",
+                "th": "ปิดการใช้งาน ForkFocus บน Twitch",
+                "tr": "Twitch'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Twitch",
+                "vi": "Tắt ForkFocus trên Twitch"
               },
               "id": "socialFocus_twitch_master_toggle",
               "defaultValue": false
@@ -20565,7 +20809,9 @@
               },
               "id": "socialFocus_twitch_block_twitch",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -20606,7 +20852,9 @@
               },
               "id": "socialFocus_twitch_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -20893,7 +21141,9 @@
               },
               "id": "socialFocus_twitch_hide_front_page",
               "defaultValue": false,
-              "styles": ["main#page-main-content-wrapper > div"]
+              "styles": [
+                "main#page-main-content-wrapper > div"
+              ]
             },
             {
               "type": "checkbox",
@@ -21153,7 +21403,9 @@
               },
               "id": "socialFocus_twitch_hide_browse",
               "defaultValue": false,
-              "styles": ["a[href=\"/directory\"]"]
+              "styles": [
+                "a[href=\"/directory\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -21338,45 +21590,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "pinterest",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على موقع Pinterest",
-                "ca": "Desactiveu SocialFocus a Pinterest",
-                "zh-CN": "在 Pinterest 上禁用 SocialFocus",
-                "zh-TW": "在 Pinterest 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Pinterestu",
-                "cs": "Deaktivujte SocialFocus na Pinterestu",
-                "da": "Deaktiver SocialFocus på Pinterest",
-                "nl": "Schakel SocialFocus uit op Pinterest",
-                "en": "Disable SocialFocus on Pinterest",
-                "fi": "Poista SocialFocus käytöstä Pinterestissä",
-                "fr": "Désactivez SocialFocus sur Pinterest",
-                "de": "Deaktivieren Sie SocialFocus auf Pinterest",
-                "el": "Απενεργοποιήστε το SocialFocus στο Pinterest",
-                "he": "השבת את SocialFocus ב-Pinterest",
-                "hi": "Pinterest पर SocialFocus अक्षम करें",
-                "hu": "A SocialFocus letiltása a Pinteresten",
+                "ca": "Desactiveu ForkFocus a Pinterest",
+                "zh-CN": "在 Pinterest 上禁用 ForkFocus",
+                "zh-TW": "在 Pinterest 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Pinterestu",
+                "cs": "Deaktivujte ForkFocus na Pinterestu",
+                "da": "Deaktiver ForkFocus på Pinterest",
+                "nl": "Schakel ForkFocus uit op Pinterest",
+                "en": "Disable ForkFocus on Pinterest",
+                "fi": "Poista ForkFocus käytöstä Pinterestissä",
+                "fr": "Désactivez ForkFocus sur Pinterest",
+                "de": "Deaktivieren Sie ForkFocus auf Pinterest",
+                "el": "Απενεργοποιήστε το ForkFocus στο Pinterest",
+                "he": "השבת את ForkFocus ב-Pinterest",
+                "hi": "Pinterest पर ForkFocus अक्षम करें",
+                "hu": "A ForkFocus letiltása a Pinteresten",
                 "id": "Nonaktifkan Fokus Sosial di Pinterest",
-                "it": "Disabilita SocialFocus su Pinterest",
-                "ja": "Pinterest で SocialFocus を無効にする",
-                "ko": "Pinterest에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Pinterest",
-                "no": "Deaktiver SocialFocus på Pinterest",
-                "pl": "Wyłącz SocialFocus na Pintereście",
-                "pt": "Desative o SocialFocus no Pinterest",
-                "ro": "Dezactivează SocialFocus pe Pinterest",
-                "ru": "Отключить SocialFocus на Pinterest",
-                "sk": "Zakázať SocialFocus na Pintereste",
-                "es": "Deshabilitar SocialFocus en Pinterest",
-                "sv": "Inaktivera SocialFocus på Pinterest",
-                "th": "ปิดการใช้งาน SocialFocus บน Pinterest",
-                "tr": "Pinterest'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Pinterest",
-                "vi": "Tắt SocialFocus trên Pinterest"
+                "it": "Disabilita ForkFocus su Pinterest",
+                "ja": "Pinterest で ForkFocus を無効にする",
+                "ko": "Pinterest에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Pinterest",
+                "no": "Deaktiver ForkFocus på Pinterest",
+                "pl": "Wyłącz ForkFocus na Pintereście",
+                "pt": "Desative o ForkFocus no Pinterest",
+                "ro": "Dezactivează ForkFocus pe Pinterest",
+                "ru": "Отключить ForkFocus на Pinterest",
+                "sk": "Zakázať ForkFocus na Pintereste",
+                "es": "Deshabilitar ForkFocus en Pinterest",
+                "sv": "Inaktivera ForkFocus på Pinterest",
+                "th": "ปิดการใช้งาน ForkFocus บน Pinterest",
+                "tr": "Pinterest'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Pinterest",
+                "vi": "Tắt ForkFocus trên Pinterest"
               },
               "id": "socialFocus_pinterest_master_toggle",
               "defaultValue": false
@@ -21504,7 +21756,9 @@
               },
               "id": "socialFocus_pinterest_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -21747,7 +22001,9 @@
               },
               "id": "socialFocus_pinterest_hide_search_suggestion",
               "defaultValue": false,
-              "styles": ["div[data-test-id=\"typeaheadResults\"]"]
+              "styles": [
+                "div[data-test-id=\"typeaheadResults\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -21788,7 +22044,9 @@
               },
               "id": "socialFocus_pinterest_hide_video_pins",
               "defaultValue": false,
-              "styles": ["div[role=\"listitem\"]:has(video)"]
+              "styles": [
+                "div[role=\"listitem\"]:has(video)"
+              ]
             }
           ]
         }
@@ -21830,45 +22088,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "pinterest",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "تعطيل التركيز الاجتماعي على موقع Pinterest",
-                "ca": "Desactiveu SocialFocus a Pinterest",
-                "zh-CN": "在 Pinterest 上禁用 SocialFocus",
-                "zh-TW": "在 Pinterest 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Pinterestu",
-                "cs": "Deaktivujte SocialFocus na Pinterestu",
-                "da": "Deaktiver SocialFocus på Pinterest",
-                "nl": "Schakel SocialFocus uit op Pinterest",
-                "en": "Disable SocialFocus on Pinterest",
-                "fi": "Poista SocialFocus käytöstä Pinterestissä",
-                "fr": "Désactivez SocialFocus sur Pinterest",
-                "de": "Deaktivieren Sie SocialFocus auf Pinterest",
-                "el": "Απενεργοποιήστε το SocialFocus στο Pinterest",
-                "he": "השבת את SocialFocus ב-Pinterest",
-                "hi": "Pinterest पर SocialFocus अक्षम करें",
-                "hu": "A SocialFocus letiltása a Pinteresten",
+                "ca": "Desactiveu ForkFocus a Pinterest",
+                "zh-CN": "在 Pinterest 上禁用 ForkFocus",
+                "zh-TW": "在 Pinterest 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Pinterestu",
+                "cs": "Deaktivujte ForkFocus na Pinterestu",
+                "da": "Deaktiver ForkFocus på Pinterest",
+                "nl": "Schakel ForkFocus uit op Pinterest",
+                "en": "Disable ForkFocus on Pinterest",
+                "fi": "Poista ForkFocus käytöstä Pinterestissä",
+                "fr": "Désactivez ForkFocus sur Pinterest",
+                "de": "Deaktivieren Sie ForkFocus auf Pinterest",
+                "el": "Απενεργοποιήστε το ForkFocus στο Pinterest",
+                "he": "השבת את ForkFocus ב-Pinterest",
+                "hi": "Pinterest पर ForkFocus अक्षम करें",
+                "hu": "A ForkFocus letiltása a Pinteresten",
                 "id": "Nonaktifkan Fokus Sosial di Pinterest",
-                "it": "Disabilita SocialFocus su Pinterest",
-                "ja": "Pinterest で SocialFocus を無効にする",
-                "ko": "Pinterest에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Pinterest",
-                "no": "Deaktiver SocialFocus på Pinterest",
-                "pl": "Wyłącz SocialFocus na Pintereście",
-                "pt": "Desative o SocialFocus no Pinterest",
-                "ro": "Dezactivează SocialFocus pe Pinterest",
-                "ru": "Отключить SocialFocus на Pinterest",
-                "sk": "Zakázať SocialFocus na Pintereste",
-                "es": "Deshabilitar SocialFocus en Pinterest",
-                "sv": "Inaktivera SocialFocus på Pinterest",
-                "th": "ปิดการใช้งาน SocialFocus บน Pinterest",
-                "tr": "Pinterest'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Pinterest",
-                "vi": "Tắt SocialFocus trên Pinterest"
+                "it": "Disabilita ForkFocus su Pinterest",
+                "ja": "Pinterest で ForkFocus を無効にする",
+                "ko": "Pinterest에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Pinterest",
+                "no": "Deaktiver ForkFocus på Pinterest",
+                "pl": "Wyłącz ForkFocus na Pintereście",
+                "pt": "Desative o ForkFocus no Pinterest",
+                "ro": "Dezactivează ForkFocus pe Pinterest",
+                "ru": "Отключить ForkFocus на Pinterest",
+                "sk": "Zakázať ForkFocus na Pintereste",
+                "es": "Deshabilitar ForkFocus en Pinterest",
+                "sv": "Inaktivera ForkFocus på Pinterest",
+                "th": "ปิดการใช้งาน ForkFocus บน Pinterest",
+                "tr": "Pinterest'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Pinterest",
+                "vi": "Tắt ForkFocus trên Pinterest"
               },
               "id": "socialFocus_pinterest_master_toggle",
               "defaultValue": false
@@ -21996,7 +22254,9 @@
               },
               "id": "socialFocus_pinterest_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -22239,7 +22499,9 @@
               },
               "id": "socialFocus_pinterest_hide_search_suggestion",
               "defaultValue": false,
-              "styles": ["div[data-test-id=\"default-tab\"]"]
+              "styles": [
+                "div[data-test-id=\"default-tab\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -22329,45 +22591,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "netflix",
           "options": [
             {
               "type": "checkbox",
               "name": {
-                "ar": "قم بتعطيل SocialFocus على Netflix",
-                "ca": "Desactiveu SocialFocus a Netflix",
-                "zh-CN": "在 Netflix 上禁用 SocialFocus",
-                "zh-TW": "在 Netflix 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Netflixu",
-                "cs": "Vypněte SocialFocus na Netflixu",
-                "da": "Deaktiver SocialFocus på Netflix",
-                "nl": "Schakel SocialFocus uit op Netflix",
-                "en": "Disable SocialFocus on Netflix",
-                "fi": "Poista SocialFocus käytöstä Netflixissä",
-                "fr": "Désactivez SocialFocus sur Netflix",
-                "de": "Deaktivieren Sie SocialFocus auf Netflix",
-                "el": "Απενεργοποιήστε το SocialFocus στο Netflix",
-                "he": "השבת את SocialFocus בנטפליקס",
+                "ar": "قم بتعطيل ForkFocus على Netflix",
+                "ca": "Desactiveu ForkFocus a Netflix",
+                "zh-CN": "在 Netflix 上禁用 ForkFocus",
+                "zh-TW": "在 Netflix 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Netflixu",
+                "cs": "Vypněte ForkFocus na Netflixu",
+                "da": "Deaktiver ForkFocus på Netflix",
+                "nl": "Schakel ForkFocus uit op Netflix",
+                "en": "Disable ForkFocus on Netflix",
+                "fi": "Poista ForkFocus käytöstä Netflixissä",
+                "fr": "Désactivez ForkFocus sur Netflix",
+                "de": "Deaktivieren Sie ForkFocus auf Netflix",
+                "el": "Απενεργοποιήστε το ForkFocus στο Netflix",
+                "he": "השבת את ForkFocus בנטפליקס",
                 "hi": "नेटफ्लिक्स पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Netflixen",
+                "hu": "A ForkFocus letiltása a Netflixen",
                 "id": "Nonaktifkan Fokus Sosial di Netflix",
-                "it": "Disattiva SocialFocus su Netflix",
-                "ja": "Netflix で SocialFocus を無効にする",
-                "ko": "Netflix에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Netflix",
-                "no": "Deaktiver SocialFocus på Netflix",
-                "pl": "Wyłącz SocialFocus w serwisie Netflix",
-                "pt": "Desative o SocialFocus no Netflix",
-                "ro": "Dezactivează SocialFocus pe Netflix",
-                "ru": "Отключить SocialFocus на Netflix",
-                "sk": "Zakážte SocialFocus na Netflixe",
-                "es": "Deshabilitar SocialFocus en Netflix",
-                "sv": "Inaktivera SocialFocus på Netflix",
-                "th": "ปิดการใช้งาน SocialFocus บน Netflix",
-                "tr": "Netflix'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Netflix",
-                "vi": "Tắt SocialFocus trên Netflix"
+                "it": "Disattiva ForkFocus su Netflix",
+                "ja": "Netflix で ForkFocus を無効にする",
+                "ko": "Netflix에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Netflix",
+                "no": "Deaktiver ForkFocus på Netflix",
+                "pl": "Wyłącz ForkFocus w serwisie Netflix",
+                "pt": "Desative o ForkFocus no Netflix",
+                "ro": "Dezactivează ForkFocus pe Netflix",
+                "ru": "Отключить ForkFocus на Netflix",
+                "sk": "Zakážte ForkFocus na Netflixe",
+                "es": "Deshabilitar ForkFocus en Netflix",
+                "sv": "Inaktivera ForkFocus på Netflix",
+                "th": "ปิดการใช้งาน ForkFocus บน Netflix",
+                "tr": "Netflix'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Netflix",
+                "vi": "Tắt ForkFocus trên Netflix"
               },
               "id": "socialFocus_netflix_master_toggle",
               "defaultValue": false
@@ -22452,7 +22714,9 @@
               },
               "id": "socialFocus_netflix_block_netflix",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -22493,7 +22757,9 @@
               },
               "id": "socialFocus_netflix_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -22781,7 +23047,9 @@
               },
               "id": "socialFocus_netflix_hide_continue_watching",
               "defaultValue": false,
-              "styles": [".lolomoRow[data-list-context=\"continueWatching\"]"]
+              "styles": [
+                ".lolomoRow[data-list-context=\"continueWatching\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -22822,7 +23090,9 @@
               },
               "id": "socialFocus_netflix_hide_my_list",
               "defaultValue": false,
-              "styles": [".lolomoRow[data-list-context=\"queue\"]"]
+              "styles": [
+                ".lolomoRow[data-list-context=\"queue\"]"
+              ]
             }
           ]
         }
@@ -22864,45 +23134,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "netflix",
           "options": [
             {
               "type": "checkbox",
               "name": {
-                "ar": "قم بتعطيل SocialFocus على Netflix",
-                "ca": "Desactiveu SocialFocus a Netflix",
-                "zh-CN": "在 Netflix 上禁用 SocialFocus",
-                "zh-TW": "在 Netflix 上停用 SocialFocus",
-                "hr": "Onemogućite SocialFocus na Netflixu",
-                "cs": "Vypněte SocialFocus na Netflixu",
-                "da": "Deaktiver SocialFocus på Netflix",
-                "nl": "Schakel SocialFocus uit op Netflix",
-                "en": "Disable SocialFocus on Netflix",
-                "fi": "Poista SocialFocus käytöstä Netflixissä",
-                "fr": "Désactivez SocialFocus sur Netflix",
-                "de": "Deaktivieren Sie SocialFocus auf Netflix",
-                "el": "Απενεργοποιήστε το SocialFocus στο Netflix",
-                "he": "השבת את SocialFocus בנטפליקס",
+                "ar": "قم بتعطيل ForkFocus على Netflix",
+                "ca": "Desactiveu ForkFocus a Netflix",
+                "zh-CN": "在 Netflix 上禁用 ForkFocus",
+                "zh-TW": "在 Netflix 上停用 ForkFocus",
+                "hr": "Onemogućite ForkFocus na Netflixu",
+                "cs": "Vypněte ForkFocus na Netflixu",
+                "da": "Deaktiver ForkFocus på Netflix",
+                "nl": "Schakel ForkFocus uit op Netflix",
+                "en": "Disable ForkFocus on Netflix",
+                "fi": "Poista ForkFocus käytöstä Netflixissä",
+                "fr": "Désactivez ForkFocus sur Netflix",
+                "de": "Deaktivieren Sie ForkFocus auf Netflix",
+                "el": "Απενεργοποιήστε το ForkFocus στο Netflix",
+                "he": "השבת את ForkFocus בנטפליקס",
                 "hi": "नेटफ्लिक्स पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Netflixen",
+                "hu": "A ForkFocus letiltása a Netflixen",
                 "id": "Nonaktifkan Fokus Sosial di Netflix",
-                "it": "Disattiva SocialFocus su Netflix",
-                "ja": "Netflix で SocialFocus を無効にする",
-                "ko": "Netflix에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Netflix",
-                "no": "Deaktiver SocialFocus på Netflix",
-                "pl": "Wyłącz SocialFocus w serwisie Netflix",
-                "pt": "Desative o SocialFocus no Netflix",
-                "ro": "Dezactivează SocialFocus pe Netflix",
-                "ru": "Отключить SocialFocus на Netflix",
-                "sk": "Zakážte SocialFocus na Netflixe",
-                "es": "Deshabilitar SocialFocus en Netflix",
-                "sv": "Inaktivera SocialFocus på Netflix",
-                "th": "ปิดการใช้งาน SocialFocus บน Netflix",
-                "tr": "Netflix'te SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Netflix",
-                "vi": "Tắt SocialFocus trên Netflix"
+                "it": "Disattiva ForkFocus su Netflix",
+                "ja": "Netflix で ForkFocus を無効にする",
+                "ko": "Netflix에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Netflix",
+                "no": "Deaktiver ForkFocus på Netflix",
+                "pl": "Wyłącz ForkFocus w serwisie Netflix",
+                "pt": "Desative o ForkFocus no Netflix",
+                "ro": "Dezactivează ForkFocus pe Netflix",
+                "ru": "Отключить ForkFocus на Netflix",
+                "sk": "Zakážte ForkFocus na Netflixe",
+                "es": "Deshabilitar ForkFocus en Netflix",
+                "sv": "Inaktivera ForkFocus på Netflix",
+                "th": "ปิดการใช้งาน ForkFocus บน Netflix",
+                "tr": "Netflix'te ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Netflix",
+                "vi": "Tắt ForkFocus trên Netflix"
               },
               "id": "socialFocus_netflix_master_toggle",
               "defaultValue": false
@@ -22987,7 +23257,9 @@
               },
               "id": "socialFocus_netflix_block_netflix",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -23028,7 +23300,9 @@
               },
               "id": "socialFocus_netflix_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -23236,45 +23510,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "tikTok",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "قم بتعطيل التركيز الاجتماعي على TikTok",
-                "ca": "Desactiveu SocialFocus a TikTok",
-                "zh-CN": "在 TikTok 上禁用 SocialFocus",
-                "zh-TW": "在 TikTok 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na TikToku",
-                "cs": "Zakázat SocialFocus na TikTok",
-                "da": "Deaktiver SocialFocus på TikTok",
-                "nl": "Schakel SocialFocus uit op TikTok",
-                "en": "Disable SocialFocus on TikTok",
-                "fi": "Poista SocialFocus käytöstä TikTokissa",
-                "fr": "Désactivez SocialFocus sur TikTok",
-                "de": "Deaktivieren Sie SocialFocus auf TikTok",
-                "el": "Απενεργοποιήστε το SocialFocus στο TikTok",
-                "he": "השבת את SocialFocus ב-TikTok",
+                "ca": "Desactiveu ForkFocus a TikTok",
+                "zh-CN": "在 TikTok 上禁用 ForkFocus",
+                "zh-TW": "在 TikTok 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na TikToku",
+                "cs": "Zakázat ForkFocus na TikTok",
+                "da": "Deaktiver ForkFocus på TikTok",
+                "nl": "Schakel ForkFocus uit op TikTok",
+                "en": "Disable ForkFocus on TikTok",
+                "fi": "Poista ForkFocus käytöstä TikTokissa",
+                "fr": "Désactivez ForkFocus sur TikTok",
+                "de": "Deaktivieren Sie ForkFocus auf TikTok",
+                "el": "Απενεργοποιήστε το ForkFocus στο TikTok",
+                "he": "השבת את ForkFocus ב-TikTok",
                 "hi": "टिकटॉक पर सोशलफोकस अक्षम करें",
-                "hu": "Tiltsa le a SocialFocust a TikTokon",
+                "hu": "Tiltsa le a ForkFocust a TikTokon",
                 "id": "Nonaktifkan Fokus Sosial di TikTok",
-                "it": "Disabilita SocialFocus su TikTok",
-                "ja": "TikTokでSocialFocusを無効にする",
-                "ko": "TikTok에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada TikTok",
-                "no": "Deaktiver SocialFocus på TikTok",
-                "pl": "Wyłącz SocialFocus na TikTok",
-                "pt": "Desative o SocialFocus no TikTok",
-                "ro": "Dezactivează SocialFocus pe TikTok",
-                "ru": "Отключить SocialFocus в TikTok",
-                "sk": "Zakázať SocialFocus na TikTok",
-                "es": "Deshabilitar SocialFocus en TikTok",
-                "sv": "Inaktivera SocialFocus på TikTok",
-                "th": "ปิดการใช้งาน SocialFocus บน TikTok",
-                "tr": "TikTok'ta SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus у TikTok",
-                "vi": "Tắt SocialFocus trên TikTok"
+                "it": "Disabilita ForkFocus su TikTok",
+                "ja": "TikTokでForkFocusを無効にする",
+                "ko": "TikTok에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada TikTok",
+                "no": "Deaktiver ForkFocus på TikTok",
+                "pl": "Wyłącz ForkFocus na TikTok",
+                "pt": "Desative o ForkFocus no TikTok",
+                "ro": "Dezactivează ForkFocus pe TikTok",
+                "ru": "Отключить ForkFocus в TikTok",
+                "sk": "Zakázať ForkFocus na TikTok",
+                "es": "Deshabilitar ForkFocus en TikTok",
+                "sv": "Inaktivera ForkFocus på TikTok",
+                "th": "ปิดการใช้งาน ForkFocus บน TikTok",
+                "tr": "TikTok'ta ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus у TikTok",
+                "vi": "Tắt ForkFocus trên TikTok"
               },
               "id": "socialFocus_tikTok_master_toggle",
               "defaultValue": false
@@ -23359,7 +23633,9 @@
               },
               "id": "socialFocus_tikTok_block_tikTok",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -23400,7 +23676,9 @@
               },
               "id": "socialFocus_tikTok_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -23603,45 +23881,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "tikTok",
           "options": [
             {
               "type": "checkbox",
               "name": {
                 "ar": "قم بتعطيل التركيز الاجتماعي على TikTok",
-                "ca": "Desactiveu SocialFocus a TikTok",
-                "zh-CN": "在 TikTok 上禁用 SocialFocus",
-                "zh-TW": "在 TikTok 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na TikToku",
-                "cs": "Zakázat SocialFocus na TikTok",
-                "da": "Deaktiver SocialFocus på TikTok",
-                "nl": "Schakel SocialFocus uit op TikTok",
-                "en": "Disable SocialFocus on TikTok",
-                "fi": "Poista SocialFocus käytöstä TikTokissa",
-                "fr": "Désactivez SocialFocus sur TikTok",
-                "de": "Deaktivieren Sie SocialFocus auf TikTok",
-                "el": "Απενεργοποιήστε το SocialFocus στο TikTok",
-                "he": "השבת את SocialFocus ב-TikTok",
+                "ca": "Desactiveu ForkFocus a TikTok",
+                "zh-CN": "在 TikTok 上禁用 ForkFocus",
+                "zh-TW": "在 TikTok 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na TikToku",
+                "cs": "Zakázat ForkFocus na TikTok",
+                "da": "Deaktiver ForkFocus på TikTok",
+                "nl": "Schakel ForkFocus uit op TikTok",
+                "en": "Disable ForkFocus on TikTok",
+                "fi": "Poista ForkFocus käytöstä TikTokissa",
+                "fr": "Désactivez ForkFocus sur TikTok",
+                "de": "Deaktivieren Sie ForkFocus auf TikTok",
+                "el": "Απενεργοποιήστε το ForkFocus στο TikTok",
+                "he": "השבת את ForkFocus ב-TikTok",
                 "hi": "टिकटॉक पर सोशलफोकस अक्षम करें",
-                "hu": "Tiltsa le a SocialFocust a TikTokon",
+                "hu": "Tiltsa le a ForkFocust a TikTokon",
                 "id": "Nonaktifkan Fokus Sosial di TikTok",
-                "it": "Disabilita SocialFocus su TikTok",
-                "ja": "TikTokでSocialFocusを無効にする",
-                "ko": "TikTok에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada TikTok",
-                "no": "Deaktiver SocialFocus på TikTok",
-                "pl": "Wyłącz SocialFocus na TikTok",
-                "pt": "Desative o SocialFocus no TikTok",
-                "ro": "Dezactivează SocialFocus pe TikTok",
-                "ru": "Отключить SocialFocus в TikTok",
-                "sk": "Zakázať SocialFocus na TikTok",
-                "es": "Deshabilitar SocialFocus en TikTok",
-                "sv": "Inaktivera SocialFocus på TikTok",
-                "th": "ปิดการใช้งาน SocialFocus บน TikTok",
-                "tr": "TikTok'ta SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus у TikTok",
-                "vi": "Tắt SocialFocus trên TikTok"
+                "it": "Disabilita ForkFocus su TikTok",
+                "ja": "TikTokでForkFocusを無効にする",
+                "ko": "TikTok에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada TikTok",
+                "no": "Deaktiver ForkFocus på TikTok",
+                "pl": "Wyłącz ForkFocus na TikTok",
+                "pt": "Desative o ForkFocus no TikTok",
+                "ro": "Dezactivează ForkFocus pe TikTok",
+                "ru": "Отключить ForkFocus в TikTok",
+                "sk": "Zakázať ForkFocus na TikTok",
+                "es": "Deshabilitar ForkFocus en TikTok",
+                "sv": "Inaktivera ForkFocus på TikTok",
+                "th": "ปิดการใช้งาน ForkFocus บน TikTok",
+                "tr": "TikTok'ta ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus у TikTok",
+                "vi": "Tắt ForkFocus trên TikTok"
               },
               "id": "socialFocus_tikTok_master_toggle",
               "defaultValue": false
@@ -23726,7 +24004,9 @@
               },
               "id": "socialFocus_tikTok_block_tikTok",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -23767,7 +24047,9 @@
               },
               "id": "socialFocus_tikTok_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -23975,45 +24257,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "blueSky",
           "options": [
             {
               "type": "checkbox",
               "name": {
-                "ar": "تعطيل SocialFocus على Bluesky",
-                "ca": "Desactiveu SocialFocus a Bluesky",
-                "zh-CN": "在 Bluesky 上禁用 SocialFocus",
-                "zh-TW": "在 Bluesky 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na Blueskyju",
-                "cs": "Zakázat SocialFocus na Bluesky",
-                "da": "Deaktiver SocialFocus på Bluesky",
-                "nl": "Schakel SocialFocus uit op Bluesky",
-                "en": "Disable SocialFocus on Bluesky",
-                "fi": "Poista SocialFocus käytöstä Blueskyssä",
-                "fr": "Désactiver SocialFocus sur Bluesky",
-                "de": "Deaktivieren Sie SocialFocus auf Bluesky",
-                "el": "Απενεργοποιήστε το SocialFocus στο Bluesky",
-                "he": "השבת את SocialFocus ב-Blusky",
+                "ar": "تعطيل ForkFocus على Bluesky",
+                "ca": "Desactiveu ForkFocus a Bluesky",
+                "zh-CN": "在 Bluesky 上禁用 ForkFocus",
+                "zh-TW": "在 Bluesky 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na Blueskyju",
+                "cs": "Zakázat ForkFocus na Bluesky",
+                "da": "Deaktiver ForkFocus på Bluesky",
+                "nl": "Schakel ForkFocus uit op Bluesky",
+                "en": "Disable ForkFocus on Bluesky",
+                "fi": "Poista ForkFocus käytöstä Blueskyssä",
+                "fr": "Désactiver ForkFocus sur Bluesky",
+                "de": "Deaktivieren Sie ForkFocus auf Bluesky",
+                "el": "Απενεργοποιήστε το ForkFocus στο Bluesky",
+                "he": "השבת את ForkFocus ב-Blusky",
                 "hi": "ब्लूस्काई पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Bluesky-n",
+                "hu": "A ForkFocus letiltása a Bluesky-n",
                 "id": "Nonaktifkan Fokus Sosial di Bluesky",
-                "it": "Disabilita SocialFocus su Bluesky",
-                "ja": "Bluesky で SocialFocus を無効にする",
-                "ko": "Bluesky에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Bluesky",
-                "no": "Deaktiver SocialFocus på Bluesky",
-                "pl": "Wyłącz SocialFocus na Bluesky",
-                "pt": "Desativar SocialFocus no Bluesky",
-                "ro": "Dezactivați SocialFocus pe Bluesky",
-                "ru": "Отключить SocialFocus в Bluesky",
-                "sk": "Zakázať SocialFocus na Bluesky",
-                "es": "Deshabilitar SocialFocus en Bluesky",
-                "sv": "Inaktivera SocialFocus på Bluesky",
-                "th": "ปิดการใช้งาน SocialFocus บน Bluesky",
-                "tr": "Bluesky'de SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Bluesky",
-                "vi": "Tắt SocialFocus trên Bluesky"
+                "it": "Disabilita ForkFocus su Bluesky",
+                "ja": "Bluesky で ForkFocus を無効にする",
+                "ko": "Bluesky에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Bluesky",
+                "no": "Deaktiver ForkFocus på Bluesky",
+                "pl": "Wyłącz ForkFocus na Bluesky",
+                "pt": "Desativar ForkFocus no Bluesky",
+                "ro": "Dezactivați ForkFocus pe Bluesky",
+                "ru": "Отключить ForkFocus в Bluesky",
+                "sk": "Zakázať ForkFocus na Bluesky",
+                "es": "Deshabilitar ForkFocus en Bluesky",
+                "sv": "Inaktivera ForkFocus på Bluesky",
+                "th": "ปิดการใช้งาน ForkFocus บน Bluesky",
+                "tr": "Bluesky'de ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Bluesky",
+                "vi": "Tắt ForkFocus trên Bluesky"
               },
               "id": "socialFocus_blueSky_master_toggle",
               "defaultValue": false
@@ -24098,7 +24380,9 @@
               },
               "id": "socialFocus_blueSky_block_blueSky",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -24139,7 +24423,9 @@
               },
               "id": "socialFocus_blueSky_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important }"]
+              "styles": [
+                "html { filter: grayscale(1) !important }"
+              ]
             }
           ]
         },
@@ -24770,7 +25056,9 @@
               },
               "id": "socialFocus_blueSky_navigationBar_hide_button_home",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href=\"/\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href=\"/\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -24811,7 +25099,9 @@
               },
               "id": "socialFocus_blueSky_navigationBar_hide_button_search",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href=\"/search\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href=\"/search\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -24852,7 +25142,9 @@
               },
               "id": "socialFocus_blueSky_navigationBar_hide_button_notifications",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href=\"/notifications\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href=\"/notifications\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -24893,7 +25185,9 @@
               },
               "id": "socialFocus_blueSky_navigationBar_hide_button_chat",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href=\"/messages\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href=\"/messages\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -24934,7 +25228,9 @@
               },
               "id": "socialFocus_blueSky_navigationBar_hide_button_feeds",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href=\"/feeds\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href=\"/feeds\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -24975,7 +25271,9 @@
               },
               "id": "socialFocus_blueSky_navigationBar_hide_button_lists",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href=\"/lists\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href=\"/lists\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -25059,7 +25357,9 @@
               },
               "id": "socialFocus_blueSky_navigationBar_hide_button_settings",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"] a[href*=\"/settings\"]"]
+              "styles": [
+                "nav[role=\"navigation\"] a[href*=\"/settings\"]"
+              ]
             },
             {
               "type": "checkbox",
@@ -25185,7 +25485,9 @@
               },
               "id": "socialFocus_blueSky_rightBar_hide_search",
               "defaultValue": false,
-              "styles": ["div:has(> input[enterkeyhint=\"search\"])"]
+              "styles": [
+                "div:has(> input[enterkeyhint=\"search\"])"
+              ]
             },
             {
               "type": "checkbox",
@@ -25313,45 +25615,45 @@
             "uk": "",
             "vi": ""
           },
-          "groupId": "disableSocialFocus",
+          "groupId": "disableForkFocus",
           "parentCategoryId": "blueSky",
           "options": [
             {
               "type": "checkbox",
               "name": {
-                "ar": "تعطيل SocialFocus على Bluesky",
-                "ca": "Desactiveu SocialFocus a Bluesky",
-                "zh-CN": "在 Bluesky 上禁用 SocialFocus",
-                "zh-TW": "在 Bluesky 上停用 SocialFocus",
-                "hr": "Onemogući SocialFocus na Blueskyju",
-                "cs": "Zakázat SocialFocus na Bluesky",
-                "da": "Deaktiver SocialFocus på Bluesky",
-                "nl": "Schakel SocialFocus uit op Bluesky",
-                "en": "Disable SocialFocus on Bluesky",
-                "fi": "Poista SocialFocus käytöstä Blueskyssä",
-                "fr": "Désactiver SocialFocus sur Bluesky",
-                "de": "Deaktivieren Sie SocialFocus auf Bluesky",
-                "el": "Απενεργοποιήστε το SocialFocus στο Bluesky",
-                "he": "השבת את SocialFocus ב-Blusky",
+                "ar": "تعطيل ForkFocus على Bluesky",
+                "ca": "Desactiveu ForkFocus a Bluesky",
+                "zh-CN": "在 Bluesky 上禁用 ForkFocus",
+                "zh-TW": "在 Bluesky 上停用 ForkFocus",
+                "hr": "Onemogući ForkFocus na Blueskyju",
+                "cs": "Zakázat ForkFocus na Bluesky",
+                "da": "Deaktiver ForkFocus på Bluesky",
+                "nl": "Schakel ForkFocus uit op Bluesky",
+                "en": "Disable ForkFocus on Bluesky",
+                "fi": "Poista ForkFocus käytöstä Blueskyssä",
+                "fr": "Désactiver ForkFocus sur Bluesky",
+                "de": "Deaktivieren Sie ForkFocus auf Bluesky",
+                "el": "Απενεργοποιήστε το ForkFocus στο Bluesky",
+                "he": "השבת את ForkFocus ב-Blusky",
                 "hi": "ब्लूस्काई पर सोशलफोकस अक्षम करें",
-                "hu": "A SocialFocus letiltása a Bluesky-n",
+                "hu": "A ForkFocus letiltása a Bluesky-n",
                 "id": "Nonaktifkan Fokus Sosial di Bluesky",
-                "it": "Disabilita SocialFocus su Bluesky",
-                "ja": "Bluesky で SocialFocus を無効にする",
-                "ko": "Bluesky에서 SocialFocus 비활성화",
-                "ms": "Lumpuhkan SocialFocus pada Bluesky",
-                "no": "Deaktiver SocialFocus på Bluesky",
-                "pl": "Wyłącz SocialFocus na Bluesky",
-                "pt": "Desativar SocialFocus no Bluesky",
-                "ro": "Dezactivați SocialFocus pe Bluesky",
-                "ru": "Отключить SocialFocus в Bluesky",
-                "sk": "Zakázať SocialFocus na Bluesky",
-                "es": "Deshabilitar SocialFocus en Bluesky",
-                "sv": "Inaktivera SocialFocus på Bluesky",
-                "th": "ปิดการใช้งาน SocialFocus บน Bluesky",
-                "tr": "Bluesky'de SocialFocus'u devre dışı bırakın",
-                "uk": "Вимкніть SocialFocus на Bluesky",
-                "vi": "Tắt SocialFocus trên Bluesky"
+                "it": "Disabilita ForkFocus su Bluesky",
+                "ja": "Bluesky で ForkFocus を無効にする",
+                "ko": "Bluesky에서 ForkFocus 비활성화",
+                "ms": "Lumpuhkan ForkFocus pada Bluesky",
+                "no": "Deaktiver ForkFocus på Bluesky",
+                "pl": "Wyłącz ForkFocus na Bluesky",
+                "pt": "Desativar ForkFocus no Bluesky",
+                "ro": "Dezactivați ForkFocus pe Bluesky",
+                "ru": "Отключить ForkFocus в Bluesky",
+                "sk": "Zakázať ForkFocus na Bluesky",
+                "es": "Deshabilitar ForkFocus en Bluesky",
+                "sv": "Inaktivera ForkFocus på Bluesky",
+                "th": "ปิดการใช้งาน ForkFocus บน Bluesky",
+                "tr": "Bluesky'de ForkFocus'u devre dışı bırakın",
+                "uk": "Вимкніть ForkFocus на Bluesky",
+                "vi": "Tắt ForkFocus trên Bluesky"
               },
               "id": "socialFocus_blueSky_master_toggle",
               "defaultValue": false
@@ -25436,7 +25738,9 @@
               },
               "id": "socialFocus_blueSky_block_blueSky",
               "defaultValue": false,
-              "styles": ["html"]
+              "styles": [
+                "html"
+              ]
             },
             {
               "type": "checkbox",
@@ -25477,7 +25781,9 @@
               },
               "id": "socialFocus_blueSky_gray_mode",
               "defaultValue": false,
-              "styles": ["html { filter: grayscale(1) !important; }"]
+              "styles": [
+                "html { filter: grayscale(1) !important; }"
+              ]
             }
           ]
         },
@@ -26452,7 +26758,9 @@
               },
               "id": "socialFocus_blueSky_navigationBar_hide_menu_footer",
               "defaultValue": false,
-              "styles": ["nav[role=\"navigation\"]:not(:has(> a))"]
+              "styles": [
+                "nav[role=\"navigation\"]:not(:has(> a))"
+              ]
             }
           ]
         },
@@ -26534,7 +26842,9 @@
               },
               "id": "socialFocus_blueSky_other_hide_floating_new_post",
               "defaultValue": false,
-              "styles": ["button[data-testid=\"composeFAB\"]"]
+              "styles": [
+                "button[data-testid=\"composeFAB\"]"
+              ]
             },
             {
               "type": "checkbox",

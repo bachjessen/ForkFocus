@@ -8,7 +8,7 @@
 
 export const productConfig = Object.freeze({
   id: "socialfocus",
-  name: "SocialFocus",
+  name: "ForkFocus",
   storagePrefix: "socialFocus",
   supportedHosts: Object.freeze([
     "youtube.com",
@@ -27,9 +27,9 @@ export const productConfig = Object.freeze({
     "bsky.app",
   ]),
   capabilities: Object.freeze({
-    authentication: true,
-    cloudSync: true,
-    entitlement: true,
+    authentication: false,
+    cloudSync: false,
+    entitlement: false,
     timers: true,
   }),
 });

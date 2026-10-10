@@ -157,12 +157,13 @@ export function createImportExportScreen() {
       console.error("Options release picker failed", error);
     });
     root.querySelector("#exportSettingsButton")?.addEventListener("click", async (event) => {
+      const button = event.currentTarget;
+      const original = button.textContent;
       await navigator.clipboard.writeText(serialized);
-      const original = event.currentTarget.textContent;
-      event.currentTarget.textContent = "Settings Copied to Clipboard!";
+      button.textContent = "Settings Copied to Clipboard!";
       clearTimeout(copyFeedbackTimer);
       copyFeedbackTimer = setTimeout(() => {
-        event.currentTarget.textContent = original || "Export";
+        button.textContent = original || "Export";
         copyFeedbackTimer = null;
       }, 4000);
     }, { signal });

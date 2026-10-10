@@ -220,11 +220,8 @@ async function reconcileOptionsReleaseAccess() {
   }
 }
 
-function checkServerUpdates(options) {
-  return serverUpdateService.check(options).catch((error) => {
-    console.error("SocialFocus server options update failed:", error);
-    throw error;
-  });
+function checkServerUpdates(_options) {
+  return Promise.resolve({ checked: false, reason: "local_only" });
 }
 
 function ensureRuntimeReady(options) {
