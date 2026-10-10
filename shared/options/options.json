@@ -1,5 +1,5 @@
 {
-  "currentVersion": "1.0.9",
+  "currentVersion": "1.0.10",
   "data": [
     {
       "categoryId": "youtube",
@@ -455,6 +455,19 @@
               "defaultValue": false,
               "styles": [
                 "ytd-browse[page-subtype=\"home\"]"
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": {
+                "da": "Skjul knappen Startside",
+                "en": "Hide Home Button"
+              },
+              "id": "socialFocus_youtube_hide_home_button",
+              "defaultValue": false,
+              "styles": [
+                "tp-yt-app-drawer#guide[role=\"navigation\"] ytd-guide-entry-renderer:has(a[href=\"/\"])",
+                "ytd-mini-guide-renderer[role=\"navigation\"] ytd-mini-guide-entry-renderer:has(a[href=\"/\"])"
               ]
             },
             {
