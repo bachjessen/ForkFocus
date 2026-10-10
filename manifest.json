@@ -66,7 +66,7 @@
       "js": [
         "content/js/DisableVideoAutoPlay/disableVideoAutoPlay.js",
         "content/js/sites/youtube/shorts.js",
-        "content/js/sites/youtube/logoSubscriptions.js"
+        "content/js/sites/youtube/homeNavigation.js"
       ],
       "matches": [
         "*://*.youtube.com/*"
