@@ -1,53 +1,45 @@
-name: Mirror approved AMO release
-
+name: Monitor SocialFocus upstream
 on:
   workflow_dispatch:
   schedule:
     - cron: "17 5 * * *"
-
 permissions:
-  contents: write
-
+  contents: read
+  issues: write
 concurrency:
-  group: mirror-approved-amo-release
+  group: monitor-socialfocus-upstream
   cancel-in-progress: false
-
 jobs:
-  mirror:
+  monitor:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Fetch approved AMO release
-        id: amo
-        env:
-          AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
-          AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
-        run: python3 scripts/mirror-amo-release.py
-
-      - name: Check for existing mirrored release
-        id: release
+      - name: Read public SocialFocus version
+        id: upstream
+        run: |
+          data="$(curl --fail --silent --show-error https://addons.mozilla.org/api/v5/addons/addon/socialfocus/)"
+          test "$(jq -r .guid <<<"$data")" = "{26b4f076-089c-4c69-8497-44b7e5c9faef}"
+          echo "version=$(jq -r .current_version.version <<<"$data")" >> "$GITHUB_OUTPUT"
+          echo "reviewed=$(jq -r .current_version.reviewed <<<"$data")" >> "$GITHUB_OUTPUT"
+          echo "hash=$(jq -r .current_version.file.hash <<<"$data")" >> "$GITHUB_OUTPUT"
+          echo "xpi=$(jq -r .current_version.file.url <<<"$data")" >> "$GITHUB_OUTPUT"
+      - name: Notify once per upstream version
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ steps.amo.outputs.tag }}
+          VERSION: ${{ steps.upstream.outputs.version }}
+          REVIEWED: ${{ steps.upstream.outputs.reviewed }}
+          HASH: ${{ steps.upstream.outputs.hash }}
+          XPI: ${{ steps.upstream.outputs.xpi }}
         run: |
-          if gh release view "$TAG" >/dev/null 2>&1; then
-            echo "exists=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "exists=false" >> "$GITHUB_OUTPUT"
+          title="SocialFocus $VERSION available for upstream review"
+          existing="$(gh issue list --state all --search "in:title $title" --json title --jq '[.[] | select(.title == env.title)] | length' -f title="$title")"
+          if [ "$existing" -eq 0 ]; then
+            gh issue create --title "$title" --body "A new public SocialFocus version is available for manual upstream review.
+
+- Version: $VERSION
+- AMO reviewed: $REVIEWED
+- AMO hash: \`$HASH\`
+- Listing: https://addons.mozilla.org/en-US/firefox/addon/socialfocus/
+- Public XPI: $XPI
+
+Review and port relevant changes manually. Do not merge packae contents automatically; AMO lists SocialFocus as All Rights Reserved."
           fi
-
-      - name: Create mirrored GitHub release
-        if: steps.release.outputs.exists != 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          TAG: ${{ steps.amo.outputs.tag }}
-          VERSION: ${{ steps.amo.outputs.version }}
-          XPI: ${{ steps.amo.outputs.xpi }}
-          CHECKSUM: ${{ steps.amo.outputs.checksum }}
-          SHA256: ${{ steps.amo.outputs.sha256 }}
-        run: |
-          gh release create "$TAG" "$XPI" "$CHECKSUM" \
-            --target "$GITHUB_SHA" \
-            --title "Firefox Store $VERSION" \
-            --notes "Approved AMO artifact mirror for ForkFocus $VERSION. This release preserves the store-signed XPI and does not assert that the tag identifies the exact source commit used for AMO submission. SHA-256: $SHA256"
