@@ -1,5 +1,5 @@
 {
-  "currentVersion": "1.0.10",
+  "currentVersion": "1.0.11",
   "data": [
     {
       "categoryId": "youtube",
@@ -469,6 +469,15 @@
                 "tp-yt-app-drawer#guide[role=\"navigation\"] ytd-guide-entry-renderer:has(a[href=\"/\"])",
                 "ytd-mini-guide-renderer[role=\"navigation\"] ytd-mini-guide-entry-renderer:has(a[href=\"/\"])"
               ]
+            },
+            {
+              "type": "checkbox",
+              "name": {
+                "da": "Åbn Abonnementer via YouTube-logoet",
+                "en": "Open Subscriptions from YouTube Logo"
+              },
+              "id": "socialFocus_youtube_logo_opens_subscriptions",
+              "defaultValue": false
             },
             {
               "type": "checkbox",
