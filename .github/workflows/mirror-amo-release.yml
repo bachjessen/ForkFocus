@@ -1,5 +1,5 @@
 name: Monitor SocialFocus upstream
-on:
+"on":
   workflow_dispatch:
   schedule:
     - cron: "17 5 * * *"
@@ -13,33 +13,8 @@ jobs:
   monitor:
     runs-on: ubuntu-latest
     steps:
-      - name: Read public SocialFocus version
-        id: upstream
-        run: |
-          data="$(curl --fail --silent --show-error https://addons.mozilla.org/api/v5/addons/addon/socialfocus/)"
-          test "$(jq -r .guid <<<"$data")" = "{26b4f076-089c-4c69-8497-44b7e5c9faef}"
-          echo "version=$(jq -r .current_version.version <<<"$data")" >> "$GITHUB_OUTPUT"
-          echo "reviewed=$(jq -r .current_version.reviewed <<<"$data")" >> "$GITHUB_OUTPUT"
-          echo "hash=$(jq -r .current_version.file.hash <<<"$data")" >> "$GITHUB_OUTPUT"
-          echo "xpi=$(jq -r .current_version.file.url <<<"$data")" >> "$GITHUB_OUTPUT"
-      - name: Notify once per upstream version
+      - uses: actions/checkout@v5
+      - name: Check public SocialFocus release
         env:
-          GH_TOKEN: ${{ github.token }}
-          VERSION: ${{ steps.upstream.outputs.version }}
-          REVIEWED: ${{ steps.upstream.outputs.reviewed }}
-          HASH: ${{ steps.upstream.outputs.hash }}
-          XPI: ${{ steps.upstream.outputs.xpi }}
-        run: |
-          title="SocialFocus $VERSION available for upstream review"
-          existing="$(gh issue list --state all --search "in:title $title" --json title --jq '[.[] | select(.title == env.title)] | length' -f title="$title")"
-          if [ "$existing" -eq 0 ]; then
-            gh issue create --title "$title" --body "A new public SocialFocus version is available for manual upstream review.
-
-- Version: $VERSION
-- AMO reviewed: $REVIEWED
-- AMO hash: \`$HASH\`
-- Listing: https://addons.mozilla.org/en-US/firefox/addon/socialfocus/
-- Public XPI: $XPI
-
-Review and port relevant changes manually. Do not merge packae contents automatically; AMO lists SocialFocus as All Rights Reserved."
-          fi
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/check-socialfocus-upstream.py
