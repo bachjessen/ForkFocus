@@ -8,7 +8,6 @@ import "../../shared/runtime/storageMutationContract.js";
 import { createOptionDefinitionsMap, localizeCatalogValue, parseOptionsCatalog } from "../../shared/options/optionsCatalogParser.js";
 import {
   preparePopupRuntime,
-  refreshPopupUserSession,
   runStartupRouting,
 } from "../application/startupFlow.js";
 import { uiStateService } from "../services/uiStateService.js";
@@ -29,7 +28,7 @@ globalThis.SocialFocusShared = Object.freeze({
   optionsCatalog: Object.freeze({ createOptionDefinitionsMap, localizeCatalogValue, parseOptionsCatalog }),
 });
 
-storageService.setSyncHook(() => messagingService.pushCloudSync());
+storageService.setSyncHook(() => Promise.resolve({ synced: false, reason: "local_only" }));
 export const storageMutations = createStorageMutations({ storageService });
 export const storageSelectors = createStorageSelectors({ storageService });
 
@@ -48,7 +47,6 @@ async function bootstrap() {
   initializeRouter();
   await runStartupRouting({ navigate });
   uiStateService.setBootstrapState("ready");
-  void refreshPopupUserSession({ browserName: environment.browser });
 }
 
 void bootstrap().catch((error) => {

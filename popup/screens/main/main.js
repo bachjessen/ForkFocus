@@ -19,7 +19,7 @@ function localChange(changes) {
   return changes[storageKeys.notSyncingState]?.newValue ?? null;
 }
 
-export function createMainScreen(context) {
+export function createMainScreen() {
   const root = createScreenElement(htmlTemplates.mainScreen, "mainScreen");
   const mainScreenController = new AbortController();
   const { signal } = mainScreenController;
@@ -47,8 +47,6 @@ export function createMainScreen(context) {
       });
     }
     if (signal.aborted) return;
-    root.querySelectorAll(".proButton").forEach((button) => button.setAttribute("gradient", String(gradient)));
-    root.querySelector(".proButton")?.addEventListener("click", () => context.navigate("plusPromoScreen"), { signal });
 
     const storageListener = (changes) => {
       const next = localChange(changes);

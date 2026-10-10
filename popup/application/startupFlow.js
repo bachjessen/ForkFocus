@@ -10,7 +10,6 @@ import { storageSelectors } from "../core/bootstrap.js";
 import { messagingService } from "../services/messagingService.js";
 import { uiStateService } from "../services/uiStateService.js";
 import { themeService } from "../services/themeService.js";
-import { refreshNativeEntitlement } from "../scripts/appleMethods.js";
 
 function applyPopupUiState(state) {
   const { identity, local } = state;
@@ -33,28 +32,13 @@ export async function preparePopupRuntime({ browserName } = {}) {
     });
   }
   if (readiness?.ready !== true) throw new Error(readiness?.error ?? "runtime_not_ready");
-  await refreshNativeEntitlement(browserName);
   const state = await storageSelectors.getPopupState();
   applyPopupUiState(state);
   return { readiness, state };
 }
 
-export async function refreshPopupUserSession({ browserName } = {}) {
-  if (browserName === "safari") return { refreshed: false, supported: false };
-
-  try {
-    const status = await messagingService.userAuthStatus();
-    const state = await storageSelectors.getPopupState();
-    applyPopupUiState(state);
-    return { refreshed: true, supported: true, status, state };
-  } catch (error) {
-    console.error("SocialFocus token session restore unavailable:", error);
-    return {
-      refreshed: false,
-      supported: true,
-      error: error?.message ?? "user_auth_status_unavailable",
-    };
-  }
+export async function refreshPopupUserSession() {
+  return { refreshed: false, supported: false };
 }
 
 function wait(seconds, onTick) {
@@ -90,5 +74,5 @@ export async function runStartupRouting({ navigate }) {
       });
     } else { navigate("passwordUnlockingScreen"); return; }
   }
-  navigate(local[localStateKeys.showVerification] ? "emailVerification" : "mainScreen");
+  navigate("mainScreen");
 }
