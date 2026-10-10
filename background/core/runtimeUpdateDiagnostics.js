@@ -1,8 +1,7 @@
 /**
  * SocialFocus
- * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
- *
-
+* SocialFocus
+ * Copyright © 2026 
  */
 
 export const RUNTIME_UPDATE_DIAGNOSTICS_KEY = "socialFocus_runtime_update_diagnostics";

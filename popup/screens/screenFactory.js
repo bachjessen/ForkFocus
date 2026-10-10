@@ -1,8 +1,6 @@
 /**
  * SocialFocus
- * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
- *
-
+ * Copyright © 2026 
  */
 
 export function createScreenElement(html, expectedId) {

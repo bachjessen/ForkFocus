@@ -1,8 +1,7 @@
 /**
  * SocialFocus
- * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
- *
-
+* SocialFocus
+ * Copyright © 2026 
  */
 
 export async function fetchWithTimeout(url, options = {}, timeoutMs = 6000) {

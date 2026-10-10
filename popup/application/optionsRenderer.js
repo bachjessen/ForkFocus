@@ -1,8 +1,7 @@
 /**
  * SocialFocus
- * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
- *
-
+* SocialFocus
+ * Copyright © 2026 
  */
 
 import { storageKeys, systemBuckets } from "../../shared/constants/storageKeys.js";
