@@ -4,9 +4,8 @@
  */
 
 export function createScreenElement(html, expectedId) {
-  const template = document.createElement("template");
-  template.innerHTML = html.trim();
-  const element = template.content.firstElementChild;
+  const documentFragment = new DOMParser().parseFromString(html.trim(), "text/html");
+  const element = documentFragment.body.firstElementChild;
   if (!element || element.id !== expectedId || !element.classList.contains("appScreen")) {
     throw new Error(`screen_template_invalid:${expectedId}`);
   }
