@@ -3,7 +3,7 @@
   "default_locale": "en",
   "name": "__MSG_extension_name__",
   "description": "__MSG_extension_description__",
-  "version": "8.0",
+  "version": "8.0.1",
   "icons": {
     "48": "images/icon-48.png",
     "96": "images/icon-96.png",
@@ -16,7 +16,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "{26b4f076-089c-4c69-8497-44b7e5c9faef}"
+      "id": "forkfocus@simonbach.local"
     }
   },
   "content_scripts": [

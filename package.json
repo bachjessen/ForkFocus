@@ -1,0 +1,16 @@
+{
+  "name": "forkfocus",
+  "version": "8.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "python3 scripts/prepare-fork.py",
+    "test": "node --test",
+    "lint": "web-ext lint --source-dir . --ignore-files tests scripts node_modules package.json package-lock.json",
+    "build": "web-ext build --source-dir . --artifacts-dir web-ext-artifacts --overwrite-dest --ignore-files tests scripts node_modules package.json package-lock.json",
+    "sign": "web-ext sign --source-dir . --artifacts-dir web-ext-artifacts --channel unlisted --ignore-files tests scripts node_modules package.json package-lock.json"
+  },
+  "devDependencies": {
+    "web-ext": "^10.7.0"
+  }
+}
