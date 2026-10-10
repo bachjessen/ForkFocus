@@ -2,8 +2,7 @@
  * SocialFocus
  * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
  *
- * This source code is proprietary and confidential.
- * Unauthorized copying, modification, distribution, or use is strictly prohibited.
+
  */
 
 export async function fetchWithTimeout(url, options = {}, timeoutMs = 6000) {

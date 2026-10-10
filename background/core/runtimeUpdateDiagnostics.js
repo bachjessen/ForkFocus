@@ -2,8 +2,7 @@
  * SocialFocus
  * Copyright © 2026 Yevhen Tretiakov. All rights reserved.
  *
- * This source code is proprietary and confidential.
- * Unauthorized copying, modification, distribution, or use is strictly prohibited.
+
  */
 
 export const RUNTIME_UPDATE_DIAGNOSTICS_KEY = "socialFocus_runtime_update_diagnostics";
