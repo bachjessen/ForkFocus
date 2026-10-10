@@ -1,5 +1,5 @@
 {
-  "currentVersion": "1.0.12",
+  "currentVersion": "1.0.13",
   "data": [
     {
       "categoryId": "youtube",
@@ -460,8 +460,8 @@
             {
               "type": "checkbox",
               "name": {
-                "da": "Skjul knappen Startside",
-                "en": "Hide Home Button"
+                "da": "Skjul Startside",
+                "en": "Hide Home"
               },
               "id": "socialFocus_youtube_hide_home_button",
               "defaultValue": false,
@@ -473,8 +473,8 @@
             {
               "type": "checkbox",
               "name": {
-                "da": "Åbn Abonnementer via YouTube-logoet",
-                "en": "Open Subscriptions from YouTube Logo"
+                "da": "Logo åbner Abonnementer",
+                "en": "Logo Opens Subscriptions"
               },
               "id": "socialFocus_youtube_logo_opens_subscriptions",
               "defaultValue": false
@@ -482,8 +482,8 @@
             {
               "type": "checkbox",
               "name": {
-                "da": "Skjul Mest relevant på abonnementssiden",
-                "en": "Hide Most Relevant on Subscriptions Page"
+                "da": "Skjul Mest relevant",
+                "en": "Hide Most Relevant"
               },
               "id": "socialFocus_youtube_hide_subscriptions_most_relevant",
               "defaultValue": false,
