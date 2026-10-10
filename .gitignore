@@ -7,3 +7,4 @@ web-ext-artifacts/
 __pycache__/
 *.py[cod]
 /.dotfiles
+release-artifacts/
