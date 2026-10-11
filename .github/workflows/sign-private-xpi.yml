@@ -1,0 +1,60 @@
+name: Sign private XPI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - manifest.json
+      - package.json
+      - package-lock.json
+      - background.html
+      - background/**
+      - content/**
+      - iframes/**
+      - images/**
+      - popup.html
+      - popup/**
+      - privacy-policy-script-loader.js
+      - shared/**
+      - _locales/**
+      - scripts/sign-forkfocus.py
+      - scripts/check-package-versions.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sign-private-xpi
+  cancel-in-progress: false
+
+jobs:
+  sign:
+    name: sign-unlisted-xpi
+    runs-on: ubuntu-latest
+    environment: amo-signing
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify package versions match
+        run: python3 scripts/check-package-versions.py
+      - name: Sign unlisted XPI through Mozilla
+        env:
+          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
+          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
+        run: python3 scripts/sign-forkfocus.py
+      - name: Upload signed private XPI
+        uses: actions/upload-artifact@v4
+        with:
+          name: forkfocus-${{ github.sha }}-signed
+          path: web-ext-artifacts/*.xpi
+          if-no-files-found: error
+          retention-days: 30
