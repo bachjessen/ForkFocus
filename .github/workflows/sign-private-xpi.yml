@@ -48,8 +48,8 @@ jobs:
         run: python3 scripts/check-package-versions.py
       - name: Sign unlisted XPI through Mozilla
         env:
-          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
-          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
+          WEB_EXT_API_KEY: ${{ secrets.AMO_JWT_ISSUER }}
+          WEB_EXT_API_SECRET: ${{ secrets.AMO_JWT_SECRET }}
         run: python3 scripts/sign-forkfocus.py
       - name: Upload signed private XPI
         uses: actions/upload-artifact@v4
