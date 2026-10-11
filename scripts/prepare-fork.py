@@ -4,7 +4,6 @@ import json
 root = Path(__file__).resolve().parents[1]
 manifest_path = root / "manifest.json"
 manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-manifest["version"] = "8.0.1"
 manifest.setdefault("browser_specific_settings", {}).setdefault("gecko", {})["id"] = "forkfocus@simonbach.local"
 manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
